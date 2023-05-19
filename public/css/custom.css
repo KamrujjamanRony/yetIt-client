@@ -1,0 +1,55 @@
+.service-section .offset-lg-4 {
+  margin-left: 15.333% !important;
+}
+
+.services-section .featured-desc {
+  min-height: 125px;
+}
+
+ul#menu-footer-services li a::before {
+  font-family: "FontAwesome";
+
+  content: "\f101";
+
+  position: absolute;
+
+  top: 0px;
+
+  left: 0;
+
+  line-height: 18px;
+
+  font-size: 15px;
+}
+
+.zero-padding-section h3 {
+  font-size: 25px;
+}
+
+.tab-section .section-title h2.title {
+  font-size: 27px;
+
+  line-height: 35px;
+
+  margin-bottom: 0;
+}
+
+.view-morbtn {
+  text-align: center;
+
+  margin: 0 auto;
+
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 320px) and (min-width: 479px) {
+  .rs-parallax-wrap {
+    position: absolute !important;
+    display: block;
+    pointer-events: auto;
+    left: 119px !important;
+    top: 119px !important;
+    z-index: 1;
+    visibility: visible;
+  }
+}
