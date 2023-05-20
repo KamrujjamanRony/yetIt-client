@@ -12,13 +12,11 @@ import Partner from '../component/Home/Partner';
 import Blog from '../component/Home/Blog';
 import Footer from '../component/shared/Footer';
 import Carousel from '../component/Home/Carousel';
-import Test from '../component/Home/Test';
 
 const Home = () => {
     return (
         <div>
             <Navbar />
-            <Test />
             <Carousel />
             {/* <HomeSlider /> */}
             <div className="site-main">

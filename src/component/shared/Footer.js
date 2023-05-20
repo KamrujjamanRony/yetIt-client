@@ -1,8 +1,8 @@
-import React from 'react';
+import { GoLocation } from "react-icons/go";
 
 const Footer = () => {
     return (
-        <footer className="footer widget-footer clearfix">
+        <footer className="footer widget-footer clearfix block">
         <div className="first-footer ttm-bgcolor-skincolor ttm-bg ttm-bgimage-yes bg-img1">
           <div className="ttm-row-wrapper-bg-layer ttm-bg-layer"></div>
 
@@ -28,7 +28,7 @@ const Footer = () => {
                       {/* featured-icon -->  */}
 
                       <div className="ttm-icon ttm-icon_element-color-white ttm-icon_element-size-md">
-                        <i className="ti ti-location-pin"></i>
+                        <GoLocation></GoLocation>
                         {/* ttm-icon -->  */}
                       </div>
                     </div>

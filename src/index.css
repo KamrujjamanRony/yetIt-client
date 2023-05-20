@@ -246,3 +246,7 @@ code {
 .owl-stage-outer::before {
   box-sizing: border-box;
 }
+
+.my-slider {
+  width: 100% !important;
+}

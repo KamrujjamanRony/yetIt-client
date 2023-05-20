@@ -1,9 +1,27 @@
-import React from "react";
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 const Carousel = () => {
   return (
-    <div
-      className="carousel w-full h-850"
+    <Swiper
+      // install Swiper modules
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      spaceBetween={50}
+      slidesPerView={1}
+      navigation
+      loop={true}
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
       style={{
         backgroundImage:
           "url('http://www.shehala.com/public/frontend/images/slides/slider-mainbg-003.jpg')",
@@ -11,12 +29,13 @@ const Carousel = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div id="slide1" className="carousel-item relative w-full">
+      <SwiperSlide className="my-slider">
       <div className="hero w-full mt-52 mx-auto">
           <div className="hero-content flex-col lg:flex-row-reverse">
             <img
               src="http://www.shehala.com/public/frontend/images/slides/slides-011.png"
               className="w-fit"
+              data-aos="flip-left"
               alt=""
             />
             <div>
@@ -45,21 +64,14 @@ const Carousel = () => {
             </div>
           </div>
         </div>
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide3" className="btn rounded-none">
-            ❮
-          </a>
-          <a href="#slide2" className="btn rounded-none">
-            ❯
-          </a>
-        </div>
-      </div>
-      <div id="slide2" className="carousel-item relative w-full">
-        <div className="hero w-full mt-52 mx-auto">
+      </SwiperSlide>
+      <SwiperSlide className="">
+      <div className="hero w-full mt-52 mx-auto">
           <div className="hero-content flex-col lg:flex-row-reverse">
             <img
               src="http://www.shehala.com/public/frontend/images/slides/slides-023.png"
               className="w-fit"
+              data-aos="flip-left"
               alt=""
             />
             <div>
@@ -91,21 +103,14 @@ const Carousel = () => {
             </div>
           </div>
         </div>
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide1" className="btn rounded-none">
-            ❮
-          </a>
-          <a href="#slide3" className="btn rounded-none">
-            ❯
-          </a>
-        </div>
-      </div>
-      <div id="slide3" className="carousel-item relative w-full">
+      </SwiperSlide>
+      <SwiperSlide className="">
       <div className="hero w-full mt-52 mx-auto">
           <div className="hero-content flex-col lg:flex-row-reverse">
             <img
               src="http://www.shehala.com/public/frontend/images/slides/slides-012.png"
               className="w-1/2"
+              data-aos="flip-left"
               alt=""
             />
             <div>
@@ -134,16 +139,8 @@ const Carousel = () => {
             </div>
           </div>
         </div>
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide2" className="btn rounded-none">
-            ❮
-          </a>
-          <a href="#slide1" className="btn rounded-none">
-            ❯
-          </a>
-        </div>
-      </div>
-    </div>
+      </SwiperSlide>
+    </Swiper>
   );
 };
 
