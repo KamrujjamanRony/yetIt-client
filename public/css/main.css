@@ -2320,7 +2320,7 @@ ul.footer-nav-menu li:not(:last-child):after {
 
 .about-bg .ttm-page-title-row {
   position: relative;
-  background-image: url(../images/aboutbg.jpg);
+  background-image: url("http://www.shehala.com/public/frontend/images/aboutbg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

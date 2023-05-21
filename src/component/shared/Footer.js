@@ -1,4 +1,8 @@
 import { GoLocation } from "react-icons/go";
+import { HiOutlineEnvelope } from "react-icons/hi2";
+import { TfiAlarmClock } from "react-icons/tfi";
+import { BsTelephoneFill } from "react-icons/bs";
+import { FaFacebookF, FaTwitter, FaFlickr, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -28,7 +32,7 @@ const Footer = () => {
                       {/* featured-icon -->  */}
 
                       <div className="ttm-icon ttm-icon_element-color-white ttm-icon_element-size-md">
-                        <GoLocation></GoLocation>
+                        <GoLocation className="text-white text-3xl"></GoLocation>
                         {/* ttm-icon -->  */}
                       </div>
                     </div>
@@ -49,14 +53,13 @@ const Footer = () => {
               </div>
 
               <div className="col-lg-4 col-md-4 col-sm-6 order-md-3">
-                <div className="text-sm-right">
+                <div className="text-sm-right relative">
                   <a
-                    className="ttm-btn ttm-btn-size-md ttm-btn-style-border ttm-icon-btn-left ttm-btn-color-white"
+                    className="ttm-btn ttm-btn-size-md ttm-btn-style-border ttm-icon-btn-left ttm-btn-color-white flex justify-center items-center"
                     href="mailto:info@shehala.com"
                     title=""
                   >
-                    {" "}
-                    info@shehala.com <i className="fa fa-envelope-o"></i>
+                  <HiOutlineEnvelope className="text-xl inline-block"></HiOutlineEnvelope>  <span>info@shehala.com</span> 
                   </a>
                 </div>
               </div>
@@ -86,8 +89,8 @@ const Footer = () => {
                       <div className="featured-icon">
                         {/* featured-icon -->  */}
 
-                        <div className="ttm-icon ttm-icon_element-style-round ttm-icon_element-bgcolor-skincolor ttm-icon_element-size-md ttm-icon_element-style-round">
-                          <span className="flaticon flaticon-clock"></span>
+                        <div className="ttm-icon ttm-icon_element-style-round ttm-icon_element-bgcolor-skincolor ttm-icon_element-size-md ttm-icon_element-style-round flex justify-center items-center">
+                          <TfiAlarmClock className="text-3xl"></TfiAlarmClock>
                           {/* ttm-icon -->  */}
                         </div>
                       </div>
@@ -119,7 +122,7 @@ const Footer = () => {
                 <div className="widget link-widget clearfix">
                   <h3 className="widget-title">Quick Links</h3>
 
-                  <ul id="menu-footer-services">
+                  <ul id="menu-footer-services list-disc">
                     <li>
                       <a href="http://www.shehala.com/why-shehala-it-limited">
                         Why Shehala IT Limited?
@@ -166,22 +169,6 @@ const Footer = () => {
                   </ul>
 
                   <div style={{marginTop: "25px"}}>
-                    {/* <script type="text/javascript"> //<![CDATA[
-
-  var tlJsHost = ((window.location.protocol == "https:") ? "https://secure.trust-provider.com/" : "http://www.trustlogo.com/");
-
-  document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"));
-
-//]]></script> */}
-                    <script
-                      src="http://www.trustlogo.com/trustlogo/javascript/trustlogo.js"
-                      type="text/javascript"
-                    ></script>
-
-                    <script language="JavaScript" type="text/javascript">
-                      TrustLogo("https://www.positivessl.com/images/seals/positivessl_trust_seal_md_167x42.png",
-                      "POSDV", "none");
-                    </script>
                       <img
                         src="https://www.positivessl.com/images/seals/positivessl_trust_seal_md_167x42.png"
                         border="0"
@@ -189,7 +176,6 @@ const Footer = () => {
                         onContextMenu="return tLLB(event);"
                         alt=""
                       />
-                    {/* --><div id="tl_popupPOSDV" name="tl_popupPOSDV" style="position:absolute;z-index:0;visibility: hidden;background-color: transparent;overflow:hidden;" onmouseover="tLoB('tl_popupPOSDV')" onmousemove="tLpC('tl_popupPOSDV')" onmouseout="tLpB('tl_popupPOSDV')">&nbsp;</div> */}
                   </div>
                 </div>
               </div>
@@ -206,9 +192,9 @@ const Footer = () => {
                         House #06, Road #02, Block #H, Sector #2 Aftabnagar,
                         Dhaka 1212 Bangladesh.
                         <br />
-                        <i className="fa fa-phone"></i> +88 09611741741
+                        <BsTelephoneFill className="inline-block"></BsTelephoneFill> +88 09611741741
                         <br />
-                        <i className="fa fa-envelope-o"></i>
+                        <HiOutlineEnvelope className="text-xl inline-block"></HiOutlineEnvelope>
                         <a href="mailto:info@shehala.com"> info@shehala.com</a>
                       </p>
                       <br />
@@ -218,9 +204,9 @@ const Footer = () => {
                       <p>
                         Højvangsvej 41 2600 Glostrup Denmark
                         <br />
-                        <i className="fa fa-phone"></i> +45 89 87 06 63
+                        <BsTelephoneFill className="inline-block"></BsTelephoneFill> +45 89 87 06 63
                         <br />
-                        <i className="fa fa-envelope-o"></i>
+                        <HiOutlineEnvelope className="text-xl inline-block"></HiOutlineEnvelope>
                         <a href="mailto:info@shehala.com"> info@shehala.com</a>
                       </p>
                     </div>
@@ -231,11 +217,11 @@ const Footer = () => {
                       <p>
                         7 Chatterson Street, Whitby, Ontario, Canada, L1R 0B1
                         <br />
-                        <i className="fa fa-phone"></i> +1 (416) 686-3111
+                        <BsTelephoneFill className="inline-block"></BsTelephoneFill> +1 (416) 686-3111
                         <br />
-                        <i className="fa fa-phone"></i> +1 (888) 340-9240 ( Toll
+                        <BsTelephoneFill className="inline-block"></BsTelephoneFill> +1 (888) 340-9240 ( Toll
                         free )<br />
-                        <i className="fa fa-envelope-o"></i>
+                        <HiOutlineEnvelope className="text-xl inline-block"></HiOutlineEnvelope>
                         <a href="mailto:contact@shehala.com">
                           {" "}
                           contact@shehala.com{" "}
@@ -247,9 +233,9 @@ const Footer = () => {
 
                       <p>
                         410 Mercedes Street Benbrook TX-76126 U.S.A <br />
-                        <i className="fa fa-phone"></i> +1 (817) 249-9595
+                        <BsTelephoneFill className="inline-block"></BsTelephoneFill> +1 (817) 249-9595
                         <br />
-                        <i className="fa fa-envelope-o"></i>
+                        <HiOutlineEnvelope className="text-xl inline-block"></HiOutlineEnvelope>
                         <a href="mailto:contact@shehala.com">
                           {" "}
                           contact@shehala.com{" "}
@@ -259,55 +245,55 @@ const Footer = () => {
                   </div>
 
                   <div className="textwidget widget-text">
-                    <h5 className="mb-20">Follow Us On</h5>
+                    <h5 className="my-6">Follow Us On</h5>
 
                     <div className="social-icons circle social-hover">
                       <ul className="list-inline">
                         <li className="social-facebook">
                           <a
-                            className="tooltip-top"
+                            className="tooltip-top flex justify-center items-center"
                             target="_blank"
                             rel="noreferrer"
                             href="https://www.facebook.com/Shehala.IT.Limited"
                             data-tooltip="Facebook"
                           >
-                            <i className="fa fa-facebook" aria-hidden="true"></i>
+                            <FaFacebookF className="inline-block"></FaFacebookF>
                           </a>
                         </li>
 
                         <li className="social-twitter">
                           <a
-                            className="tooltip-top"
+                            className="tooltip-top flex justify-center items-center"
                             target="_blank"
                             rel="noreferrer"
                             href="https://twitter.com/ShehalaItLtd"
                             data-tooltip="Twitter"
                           >
-                            <i className="fa fa-twitter" aria-hidden="true"></i>
+                            <FaTwitter className="inline-block"></FaTwitter>
                           </a>
                         </li>
 
                         <li className="social-flickr">
                           <a
-                            className=" tooltip-top"
+                            className=" tooltip-top flex justify-center items-center"
                             target="_blank"
                             rel="noreferrer"
                             href="https://twitter.com/ShehalaItLtd"
                             data-tooltip="flickr"
                           >
-                            <i className="fa fa-flickr" aria-hidden="true"></i>
+                            <FaFlickr className="inline-block"></FaFlickr>
                           </a>
                         </li>
 
                         <li className="social-linkedin">
                           <a
-                            className=" tooltip-top"
+                            className=" tooltip-top flex justify-center items-center"
                             target="_blank"
                             rel="noreferrer"
                             href="https://www.linkedin.com/authwall?trk=gf&amp;trkInfo=AQGrWWUn-p-ELQAAAXdIzb24Kb97ekE7HeXllo0OtCZiMqDU7httxeRyLhXiQ0ZYvx_RJMq-IDXCFrMzWKHaiZuWdC-1KcIQaQ-O6dPMoDquzxGDxPgpSpURbBflJhc6-t-hxz8=&amp;originalReferer=http://localhost/shehala.com/&amp;sessionRedirect=https%3A%2F%2Fbd.linkedin.com%2Fin%2Fshehala"
                             data-tooltip="LinkedIn"
                           >
-                            <i className="fa fa-linkedin" aria-hidden="true"></i>
+                            <FaLinkedinIn className="inline-block"></FaLinkedinIn>
                           </a>
                         </li>
                       </ul>

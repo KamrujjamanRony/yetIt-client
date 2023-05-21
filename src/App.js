@@ -1,10 +1,14 @@
-import React from 'react';
-import Home from './pages/Home';
+import React from "react";
+import AboutUs from "./pages/AboutUs";
+import Navbar from "./component/shared/Navbar";
+import Footer from "./component/shared/Footer";
 
 function App() {
   return (
     <div>
-      <Home />
+      <Navbar />
+      <AboutUs />
+      <Footer />
     </div>
   );
 }

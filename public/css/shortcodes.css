@@ -159,11 +159,6 @@
   margin-left: -100px;
   right: 0;
 }
-.ttm-right-span .ttm-col-wrapper-bg-layer {
-  width: auto;
-  margin-right: -100px;
-  right: 0;
-}
 .ttm-bg.ttm-bgimage-yes > .ttm-bg-layer,
 .ttm-bg.ttm-col-bgimage-yes .ttm-bg-layer-inner {
   opacity: 0.9;

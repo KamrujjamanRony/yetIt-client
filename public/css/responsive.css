@@ -3,19 +3,12 @@
   .ttm-left-span .ttm-col-wrapper-bg-layer {
     margin-left: -500px;
   }
-  .ttm-right-span .ttm-col-wrapper-bg-layer {
-    margin-right: -500px;
-  }
 }
 
 @media only screen and (max-width: 1800px) and (min-width: 1601px) {
   /* Bg-Layer */
   .ttm-left-span .ttm-col-wrapper-bg-layer {
     margin-left: -400px;
-  }
-  .ttm-right-span .ttm-col-wrapper-bg-layer,
-  .col-bg-img-one .ttm-right-span .ttm-col-wrapper-bg-layer {
-    margin-right: -400px;
   }
 }
 
@@ -24,20 +17,12 @@
   .ttm-left-span .ttm-col-wrapper-bg-layer {
     margin-left: -300px;
   }
-  .ttm-right-span .ttm-col-wrapper-bg-layer,
-  .col-bg-img-one .ttm-right-span .ttm-col-wrapper-bg-layer {
-    margin-right: -300px;
-  }
 }
 
 @media only screen and (max-width: 1400px) and (min-width: 1171px) {
   /* Bg-Layer */
   .ttm-left-span .ttm-col-wrapper-bg-layer {
     margin-left: -200px;
-  }
-  .ttm-right-span .ttm-col-wrapper-bg-layer,
-  .col-bg-img-one .ttm-right-span .ttm-col-wrapper-bg-layer {
-    margin-right: -200px;
   }
 }
 @media (max-width: 1199px) {
