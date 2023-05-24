@@ -1436,7 +1436,7 @@ a.ttm-btn-bgcolor-skincolor:hover {
   left: 0;
   display: block;
   background: #fff;
-  background-image: url(../images/pre-loader-1.gif);
+  background-image: url("http://www.shehala.com/public/frontend/images/pre-loader-1.gif");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -2259,7 +2259,7 @@ ul.footer-nav-menu li:not(:last-child):after {
 
 .portfolio-bg .ttm-page-title-row {
   position: relative;
-  background-image: url(../images/project.jpg);
+  background-image: url("http://www.shehala.com/public/frontend/images/project.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -2267,7 +2267,7 @@ ul.footer-nav-menu li:not(:last-child):after {
 
 .portfolio-details .ttm-page-title-row {
   position: relative;
-  background-image: url(../images/project.jpg);
+  background-image: url("http://www.shehala.com/public/frontend/images/project.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -2312,7 +2312,7 @@ ul.footer-nav-menu li:not(:last-child):after {
 
 .ttm-page-title-row {
   position: relative;
-  background-image: url(../images/contactus-title2.jpg);
+  background-image: url("http://www.shehala.com/public/frontend/images/contactus-title2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -2343,7 +2343,7 @@ ul.footer-nav-menu li:not(:last-child):after {
 
 .webdesign-bg .ttm-page-title-row {
   position: relative;
-  background-image: url(../images/webdesign.jpg);
+  background-image: url("http://www.shehala.com/public/frontend/images/webdesign.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -2365,7 +2365,7 @@ ul.footer-nav-menu li:not(:last-child):after {
 
 .contactbg .ttm-page-title-row {
   position: relative;
-  background-image: url(../images/contactbg.jpg);
+  background-image: url("http://www.shehala.com/public/frontend/images/contactbg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -3164,7 +3164,7 @@ h1 {
 }
 
 .portfolio-bg {
-  margin-top: 140px;
+  padding-top: 140px;
 }
 
 .ttm-textcolor-skincolor {

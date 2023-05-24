@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '../component/shared/Navbar';
 import AboutUs from '../component/Home/AboutUs';
 import Summary from '../component/Home/Summary';
 import Services from '../component/Home/Services';
@@ -10,13 +9,11 @@ import WeHelp from '../component/Home/WeHelp';
 import Portfolio from '../component/Home/Portfolio';
 import Partner from '../component/Home/Partner';
 import Blog from '../component/Home/Blog';
-import Footer from '../component/shared/Footer';
 import Carousel from '../component/Home/Carousel';
 
 const Home = () => {
     return (
         <div>
-            <Navbar />
             <Carousel />
             {/* <HomeSlider /> */}
             <div className="site-main">
@@ -31,8 +28,6 @@ const Home = () => {
                 <Partner />
                 <Blog />
             </div>
-            <div style={{clear: "both"}}></div>
-            <Footer />
         </div>
     );
 };

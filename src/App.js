@@ -1,13 +1,14 @@
 import React from "react";
-import AboutUs from "./pages/AboutUs";
 import Navbar from "./component/shared/Navbar";
 import Footer from "./component/shared/Footer";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
   return (
     <div>
       <Navbar />
-      <AboutUs />
+      <ContactUs />
+      <div style={{clear: "both"}}></div>
       <Footer />
     </div>
   );
