@@ -316,3 +316,8 @@ code {
 .ttm-tabs.ttm-tab-style-classic.style1 ul.tabs li.active button:before {
   background-color: #597e82;
 }
+
+.cc {
+  display: flex;
+  justify-content: center;
+}

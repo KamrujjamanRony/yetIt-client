@@ -27,17 +27,17 @@ const AboutUs = () => {
                         <h1 className="title">About Us</h1>
                       </div>
                       {/*  /.page-title-captions  */}
-                      <div className="breadcrumb-wrapper flex justify-center items-center">
-                        <span>
-                          <a
-                            title="Homepage"
-                            className=" flex justify-center items-center"
-                            href="http://www.shehala.com"
-                          >
-                            <AiOutlineHome className="text-xl mr-2"></AiOutlineHome>
-                            Home
-                          </a>
-                        </span>
+                      <div className="breadcrumb-wrapper flex justify-center">
+                      <span>
+                      <Link
+                        title="Homepage"
+                        className="flex justify-center items-center"
+                        to="/"
+                      >
+                        <AiOutlineHome className="text-xl mr-2"></AiOutlineHome>
+                        Home
+                      </Link>
+                    </span>
                         <span className="ttm-bread-sep">&nbsp; : : &nbsp;</span>
                         <span>About Us</span>
                       </div>
@@ -128,7 +128,7 @@ const AboutUs = () => {
                               width="100%"
                               height="675px"
                               src="https://www.youtube.com/embed/9fidoaaOn_4"
-                              frameborder="0"
+                              frameBorder="0"
                               allowfullscreen=""
                             ></iframe>
                           </div>

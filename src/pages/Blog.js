@@ -152,7 +152,7 @@ const Blog = () => {
                 <aside className="widget post-widget">
                   <h3 className="widget-title">Latest News</h3>
                   <ul className="widget-post ttm-recent-post-list">
-                  {blogs?.map(blog=><li>
+                  {blogs?.map(blog=><li key={blog?.id}>
                       <Link to={`/blog/${blog?.id}`}>
                         <img
                           src={blog?.image}

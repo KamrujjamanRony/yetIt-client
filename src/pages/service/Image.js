@@ -24,15 +24,15 @@ const Image = () => {
                   </div>
                   {/*  /.page-title-captions  */}
                   <div className="breadcrumb-wrapper flex justify-center items-center">
-                    <span>
-                      <a
+                  <span>
+                      <Link
                         title="Homepage"
                         className="flex justify-center items-center"
-                        href="http://www.shehala.com"
+                        to="/"
                       >
                         <AiOutlineHome className="text-xl mr-2"></AiOutlineHome>
                         Home
-                      </a>
+                      </Link>
                     </span>
                     <span className="ttm-bread-sep">&nbsp; : : &nbsp;</span>
                     <span>Image Production</span>

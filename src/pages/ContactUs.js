@@ -1,4 +1,5 @@
-import React from "react";
+import { AiOutlineHome } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const ContactUs = () => {
   return (
@@ -14,11 +15,16 @@ const ContactUs = () => {
                     <h1 className="title"> Contact Us</h1>
                   </div>
                   {/*  /.page-title-captions   */}
-                  <div className="breadcrumb-wrapper">
-                    <span>
-                      <a title="Homepage" href="http://www.shehala.com">
-                        <i className="ti ti-home"></i>&nbsp;&nbsp;Home
-                      </a>
+                  <div className="breadcrumb-wrapper flex justify-center items-center">
+                  <span>
+                      <Link
+                        title="Homepage"
+                        className="flex justify-center items-center"
+                        to="/"
+                      >
+                        <AiOutlineHome className="text-xl mr-2"></AiOutlineHome>
+                        Home
+                      </Link>
                     </span>
                     <span className="ttm-bread-sep">&nbsp; : : &nbsp;</span>
                     <span> Contact us</span>
