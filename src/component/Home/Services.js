@@ -2,6 +2,7 @@ import { CgWebsite } from "react-icons/cg";
 import { BsCodeSquare } from "react-icons/bs";
 import { AiOutlineCode } from "react-icons/ai";
 import { TfiAngleDoubleRight } from "react-icons/tfi";
+import { Link } from "react-router-dom";
 
 const Services = () => {
     return (
@@ -54,12 +55,12 @@ const Services = () => {
                         irrespective of the type of industry.
                       </p>
                     </div>
-                    <a
+                    <Link
                       className="ttm-btn ttm-btn-size-sm ttm-btn-color-white btn-inline ttm-icon-btn-right mt-15"
-                      href="http://www.shehala.com/software-development"
+                      to="/service/cms"
                     >
                       Read More <TfiAngleDoubleRight className="inline"></TfiAngleDoubleRight>
-                    </a>
+                    </Link>
                   </div>
                   {/* <!-- featured-content END--> */}
                 </div>
@@ -91,12 +92,12 @@ const Services = () => {
                         MySQL, HTML5. As per the client's custom need
                       </p>
                     </div>
-                    <a
+                    <Link
                       className="ttm-btn ttm-btn-size-sm ttm-btn-color-white btn-inline ttm-icon-btn-right mt-15"
-                      href="http://www.shehala.com/web-development"
+                      to="/service/web-development"
                     >
                       Read More <TfiAngleDoubleRight className="inline"></TfiAngleDoubleRight>
-                    </a>
+                    </Link>
                   </div>
                   {/* <!-- featured-content END--> */}
                 </div>
@@ -126,12 +127,12 @@ const Services = () => {
                         Tablets &amp; Smartphones).{" "}
                       </p>
                     </div>
-                    <a
+                    <Link
                       className="ttm-btn ttm-btn-size-sm ttm-btn-color-white btn-inline ttm-icon-btn-right mt-15"
-                      href="http://www.shehala.com/responsive-web-design"
+                      to="/service/page"
                     >
                       Read More <TfiAngleDoubleRight className="inline"></TfiAngleDoubleRight>
-                    </a>
+                    </Link>
                   </div>
                   {/* <!-- featured-content END--> */}
                 </div>
@@ -166,12 +167,12 @@ const Services = () => {
                         to get a professional website for your business.{" "}
                       </p>
                     </div>
-                    <a
+                    <Link
                       className="ttm-btn ttm-btn-size-sm ttm-btn-color-white btn-inline ttm-icon-btn-right mt-15"
-                      href="http://www.shehala.com/ecommerce-development"
+                      to="/service/ecommerce"
                     >
                       Read More <TfiAngleDoubleRight className="inline"></TfiAngleDoubleRight>
-                    </a>
+                    </Link>
                   </div>
                   {/* <!-- featured-content END--> */}
                 </div>
@@ -204,12 +205,12 @@ const Services = () => {
                         utilize the application to their liking.{" "}
                       </p>
                     </div>
-                    <a
+                    <Link
                       className="ttm-btn ttm-btn-size-sm ttm-btn-color-white btn-inline ttm-icon-btn-right mt-15"
-                      href="http://www.shehala.com/web-development"
+                      to="/service/"
                     >
                       Read More <TfiAngleDoubleRight className="inline"></TfiAngleDoubleRight>
-                    </a>
+                    </Link>
                   </div>
                   {/* <!-- featured-content END--> */}
                 </div>
@@ -241,12 +242,12 @@ const Services = () => {
                         will guarantee you the best quality done images.{" "}
                       </p>
                     </div>
-                    <a
+                    <Link
                       className="ttm-btn ttm-btn-size-sm ttm-btn-color-white btn-inline ttm-icon-btn-right mt-15"
-                      href="http://www.shehala.com/clipping-path"
+                      to="/service/image"
                     >
                       Read More <TfiAngleDoubleRight className="inline"></TfiAngleDoubleRight>
-                    </a>
+                    </Link>
                   </div>
                   {/* <!-- featured-content END--> */}
                 </div>

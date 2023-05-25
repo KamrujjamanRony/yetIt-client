@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaPhoneAlt, FaRegEnvelope, FaRegClock, FaFacebookF, FaTwitter, FaYoutube, FaLinkedinIn } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const TopBar = () => {
     return (
@@ -16,7 +17,7 @@ const TopBar = () => {
                     <li>
                       <div className='flex items-center'>
                       <FaRegEnvelope className='mr-2'/>
-                      <a href="mailto:info@shehala.com">info@shehala.com</a>
+                      <a href="mailto:info@shehala.com">info@yesit.com</a>
                       </div>
                     </li>
                   </ul>
@@ -34,7 +35,7 @@ const TopBar = () => {
                       <ul className="social-icons mt-3">
                         <li className='mx-2'>
                           <a
-                            href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2FShehala.IT.Limited"
+                            href="https://www.facebook.com/"
                             className=" tooltip-bottom"
                             data-tooltip="Facebook"
                           >
@@ -44,7 +45,7 @@ const TopBar = () => {
 
                         <li  className='mx-2'>
                           <a
-                            href="https://twitter.com/ShehalaItLtd"
+                            href="https://twitter.com/"
                             className=" tooltip-bottom"
                             data-tooltip="Twitter"
                           >
@@ -54,7 +55,7 @@ const TopBar = () => {
 
                         <li className='mx-2'>
                           <a
-                            href="https://www.youtube.com/user/ShehalaIt"
+                            href="https://www.youtube.com/"
                             className=" tooltip-bottom"
                             data-tooltip="Youtube"
                           >
@@ -64,7 +65,7 @@ const TopBar = () => {
 
                         <li className='mx-2'>
                           <a
-                            href="https://bd.linkedin.com/in/shehala"
+                            href="https://bd.linkedin.com/"
                             className=" tooltip-bottom"
                             data-tooltip="Linkedin"
                           >
@@ -75,12 +76,12 @@ const TopBar = () => {
                     </div>
 
                     <div className="header-btn">
-                      <a
+                      <Link
                         className="ttm-btn ttm-btn-size-md  ttm-btn-bgcolor-skincolor"
-                        href="http://www.shehala.com/contact-us"
+                        to="/contact"
                       >
                         Request a Quote
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

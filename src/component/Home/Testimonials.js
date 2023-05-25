@@ -3,11 +3,15 @@ import { MdOutlineContactPhone } from "react-icons/md";
 import { A11y } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import ScrollTrigger from "react-scroll-trigger";
+import CountUp from "react-countup";
 
 // Import Swiper styles
 import "swiper/css";
+import { useState } from "react";
 
 const Testimonials = () => {
+  const [countOn, setCountOn] = useState(false);
   return (
     <section className="ttm-row bottomzero-padding-section ttm-bgcolor-grey ttm-bg ttm-bgimage-yes bg-img8 clearfix">
       <div className="ttm-row-wrapper-bg-layer ttm-bg-layer"></div>
@@ -43,8 +47,6 @@ const Testimonials = () => {
                   spaceBetween={50}
                   slidesPerView={1}
                   loop={true}
-                  onSwiper={(swiper) => console.log(swiper)}
-                  onSlideChange={() => console.log("slide change")}
                 >
                   <SwiperSlide>
                     <div className="testimonials text-center">
@@ -77,7 +79,7 @@ const Testimonials = () => {
                             type="radio"
                             name="rating-5"
                             className="mask mask-star-2 bg-orange-400"
-                            checked
+                            
                           />
                           <input
                             type="radio"
@@ -138,7 +140,7 @@ const Testimonials = () => {
                             type="radio"
                             name="rating-5"
                             className="mask mask-star-2 bg-orange-400"
-                            checked
+                            
                           />
                           <input
                             type="radio"
@@ -195,7 +197,7 @@ const Testimonials = () => {
                             type="radio"
                             name="rating-5"
                             className="mask mask-star-2 bg-orange-400"
-                            checked
+                            
                           />
                           <input
                             type="radio"
@@ -256,7 +258,7 @@ const Testimonials = () => {
                             type="radio"
                             name="rating-5"
                             className="mask mask-star-2 bg-orange-400"
-                            checked
+                            
                           />
                           <input
                             type="radio"
@@ -313,7 +315,7 @@ const Testimonials = () => {
                             type="radio"
                             name="rating-5"
                             className="mask mask-star-2 bg-orange-400"
-                            checked
+                            
                           />
                           <input
                             type="radio"
@@ -374,7 +376,7 @@ const Testimonials = () => {
                             type="radio"
                             name="rating-5"
                             className="mask mask-star-2 bg-orange-400"
-                            checked
+                            
                           />
                           <input
                             type="radio"
@@ -459,22 +461,30 @@ const Testimonials = () => {
                 {/* <!--ttm-fid--> */}
                 <div className="ttm-fid inside without-icon">
                   <div className="ttm-fid-contents text-left">
-                    <h4 className="ttm-fid-inner">
-                      <span
-                        data-appear-animation="animateDigits"
-                        data-from="0"
-                        data-to="14"
-                        data-interval="2"
-                        data-before=""
-                        data-before-style="sup"
-                        data-after=""
-                        data-after-style="sub"
+                  <ScrollTrigger
+                        onEnter={() => setCountOn(true)}
+                        onExit={() => setCountOn(false)}
                       >
-                        14
-                      </span>
+                        <h4 className="ttm-fid-inner">
+                        {countOn && (
+                                    <CountUp
+                                      start={0}
+                                      end={14}
+                                      delay={0}
+                                      duration={3}
+                                      className="text-4xl"
+                                    >
+                                      {({ countUpRef }) => (
+                                        <div>
+                                          <span ref={countUpRef} className="text-4xl" />
+                                        </div>
+                                      )}
+                                    </CountUp>
+                                  )}
                     </h4>
+                      </ScrollTrigger>
                     <h3 className="ttm-fid-title">
-                      Years of Experience Web Solution{" "}
+                      Years of Experience Web Solution
                     </h3>
                   </div>
                 </div>

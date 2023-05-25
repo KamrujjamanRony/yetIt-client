@@ -8,7 +8,6 @@ const WhyAreWe = () => {
   const handleCollapse = name => {
     dispatch(activeCollapse(name))
   }
-  console.log(collapseName)
     return (
         <section className="ttm-row tab-section clearfix">
           <div className="container contain">
@@ -39,20 +38,20 @@ const WhyAreWe = () => {
                 <div className="ttm-tabs text-center ttm-tab-style-classic style1">
                   <ul className="tabs mb-20">
                     {/* <!-- tabs --> */}
-                    <li className={`tab h-fit ${collapseName==="Costs" && "active"}`}>
-                      <a onClick={() => handleCollapse("Costs")}>
+                    <li className={`tab h-fit p-0 ${collapseName==="Costs" && "active"}`}>
+                      <button onClick={() => handleCollapse("Costs")}>
                         <CgWebsite className="i text-6xl mx-auto"></CgWebsite> <span>Reduce your costs</span>
-                      </a>
+                      </button>
                     </li>
-                    <li className={`tab h-fit ${collapseName==="WorkFlow" && "active"}`}>
-                      <a onClick={() => handleCollapse("WorkFlow")}>
+                    <li className={`tab h-fit p-0 ${collapseName==="WorkFlow" && "active"}`}>
+                      <button onClick={() => handleCollapse("WorkFlow")}>
                         <CgWebsite className="i text-6xl mx-auto"></CgWebsite> <span>Simple Workflow</span>
-                      </a>
+                      </button>
                     </li>
-                    <li className={`tab h-fit ${collapseName==="Service" && "active"}`}>
-                      <a onClick={() => handleCollapse("Service")}>
+                    <li className={`tab h-fit p-0 ${collapseName==="Service" && "active"}`}>
+                      <button onClick={() => handleCollapse("Service")}>
                         <CgWebsite className="i text-6xl mx-auto"></CgWebsite> <span>24 Hour Service</span>
-                      </a>
+                      </button>
                     </li>
                   </ul>
                   {/* <!-- tabs end--> */}

@@ -1,36 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineHome } from "react-icons/ai";
 import { HiOutlineBuildingLibrary } from "react-icons/hi2";
 import { MdDeveloperMode } from "react-icons/md";
 import { Ri24HoursLine } from "react-icons/ri";
 import { TbReportSearch } from "react-icons/tb";
+import { Link } from "react-router-dom";
+import ScrollTrigger from "react-scroll-trigger";
+import CountUp from "react-countup";
 
 const AboutUs = () => {
+  const [countOn, setCountOn] = useState(false);
   return (
-    <div class="page">
-
+    <div className="page">
       {/* site-main start */}
 
-      <div class="site-main">
+      <div className="site-main">
         {/*  page-title  */}
-        <div class="about-bg">
-          <div class="ttm-page-title-row">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="aboutbg">
-                    <div class="title-box text-center">
-                      <div class="page-title-heading">
-                        <h1 class="title">About Us</h1>
+        <div className="about-bg">
+          <div className="ttm-page-title-row">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-12">
+                  <div className="aboutbg">
+                    <div className="title-box text-center">
+                      <div className="page-title-heading">
+                        <h1 className="title">About Us</h1>
                       </div>
                       {/*  /.page-title-captions  */}
-                      <div class="breadcrumb-wrapper flex justify-center items-center">
+                      <div className="breadcrumb-wrapper flex justify-center items-center">
                         <span>
-                          <a title="Homepage" className=" flex justify-center items-center" href="http://www.shehala.com">
-                            <AiOutlineHome className="text-xl mr-2"></AiOutlineHome>Home
+                          <a
+                            title="Homepage"
+                            className=" flex justify-center items-center"
+                            href="http://www.shehala.com"
+                          >
+                            <AiOutlineHome className="text-xl mr-2"></AiOutlineHome>
+                            Home
                           </a>
                         </span>
-                        <span class="ttm-bread-sep">&nbsp; : : &nbsp;</span>
+                        <span className="ttm-bread-sep">&nbsp; : : &nbsp;</span>
                         <span>About Us</span>
                       </div>
                     </div>
@@ -46,23 +54,23 @@ const AboutUs = () => {
         </div>
         {/* site-main start */}
         {/* site-main start */}
-        <div class="site-main">
+        <div className="site-main">
           {/*  aboutus-section  */}
-          <section class="ttm-row aboutus-section clearfix">
-            <div class="container contain">
-              <div class="row">
+          <section className="ttm-row aboutus-section clearfix">
+            <div className="container contain">
+              <div className="row">
                 {/*  row  */}
-                <div class="col-lg-12">
+                <div className="col-lg-12">
                   {/*  section title  */}
-                  <div class="section-title with-desc clearfix">
-                    <div class="title-header">
+                  <div className="section-title with-desc clearfix">
+                    <div className="title-header">
                       <h5>About us</h5>
-                      <h2 class="title">
+                      <h2 className="title">
                         We are here to Web Solution with 14 years of{" "}
                         <span>experience</span>
                       </h2>
                     </div>
-                    <div class="title-desc">
+                    <div className="title-desc">
                       <p>
                         Shehala IT is one of the fastest growing and forward
                         thinking IT solution companies in Bangladesh, delivering
@@ -81,19 +89,19 @@ const AboutUs = () => {
                   {/*  section title end  */}
                   {/*  row  */}
 
-                  <p class="mb-0">
+                  <p className="mb-0">
                     <b>
                       Shehala IT grew from four persons company to a 100 persons
                       company with in 14 years by repeatedly delivering client
                       satisfaction.
                     </b>
                   </p>
-                  <a
-                    href="http://www.shehala.com/portfolio"
-                    class="ttm-btn ttm-btn-bgcolor-skincolor ttm-btn-size-md mt-35"
+                  <Link
+                    to="/portfolio"
+                    className="ttm-btn ttm-btn-bgcolor-skincolor ttm-btn-size-md mt-35"
                   >
                     PORTFOLIO
-                  </a>
+                  </Link>
                 </div>
               </div>
               {/*  row end  */}
@@ -102,20 +110,21 @@ const AboutUs = () => {
           {/*  aboutus-section end  */}
 
           {/*  about-us-section  */}
-          <section class="ttm-row zero-padding-section ttm-bgcolor-white clearfix">
-            <div class="container contain">
-              <div class="row no-gutters">
-                <div class="col-md-12">
-                  <div class="ttm-bgcolor-grey ttm-bg ttm-col-bgcolor-yes ttm-left-span spacing-7 position-relative z-1">
-                    <div class="ttm-col-wrapper-bg-layer ttm-bg-layer">
-                      <div class="ttm-bg-layer-inner"></div>
+          <section className="ttm-row zero-padding-section ttm-bgcolor-white clearfix">
+            <div className="container contain">
+              <div className="row no-gutters">
+                <div className="col-md-12">
+                  <div className="ttm-bgcolor-grey ttm-bg ttm-col-bgcolor-yes ttm-left-span spacing-7 position-relative z-1">
+                    <div className="ttm-col-wrapper-bg-layer ttm-bg-layer">
+                      <div className="ttm-bg-layer-inner"></div>
                     </div>
-                    <div class="layer-content">
-                      <div class="row">
-                        <div class="col-lg-6">
+                    <div className="layer-content">
+                      <div className="row">
+                        <div className="col-lg-6">
                           {/*  ttm_single_image-wrapper  */}
-                          <div class="ttm_single_image-wrapper">
+                          <div className="ttm_single_image-wrapper">
                             <iframe
+                              title="youtube video"
                               width="100%"
                               height="675px"
                               src="https://www.youtube.com/embed/9fidoaaOn_4"
@@ -124,63 +133,71 @@ const AboutUs = () => {
                             ></iframe>
                           </div>
                           {/*  ttm_single_image-wrapper end  */}
-                          <div class="about-overlay-02">
+                          <div className="about-overlay-02">
                             <h3>14 Years of</h3>
                             <p>Web Business Experience</p>
                           </div>
                         </div>
-                        <div class="col-lg-6">
-                          <div class="res-991-mt-30">
+                        <div className="col-lg-6">
+                          <div className="res-991-mt-30">
                             {/*  section title  */}
-                            <div class="section-title with-desc clearfix">
-                              <div class="title-header">
+                            <div className="section-title with-desc clearfix">
+                              <div className="title-header">
                                 <h5>About Shehala IT</h5>
-                                <h2 class="title font-medium">
+                                <h2 className="title font-medium">
                                   Shehala IT grew from four persons company to a
                                   100 persons company with in 14 years by
                                   repeatedly delivering
-                                  <span className="block">client satisfaction.</span>
+                                  <span className="block">
+                                    client satisfaction.
+                                  </span>
                                 </h2>
                               </div>
-                              <div class="title-desc">
+                              <div className="title-desc">
                                 <p></p>
                               </div>
                             </div>
                             {/*  section title end  */}
-                            <div class="mt-30">
+                            <div className="mt-30">
                               {/*  progress-bar  */}
-                              <div class="ttm-progress-bar" data-percent="95%">
-                                <div class="progress-bar-title">
+                              <div
+                                className="ttm-progress-bar"
+                                data-percent="95%"
+                              >
+                                <div className="progress-bar-title">
                                   UI/UX Design
                                 </div>
                                 {/*  progress-bar-title  */}
-                                <div class="progress-bar-inner">
+                                <div className="progress-bar-inner">
                                   <div
-                                    class="progress-bar progress-bar-color-bar_skincolor"
-                                    style={{width: "95%"}}
+                                    className="progress-bar progress-bar-color-bar_skincolor"
+                                    style={{ width: "95%" }}
                                   ></div>
                                 </div>
                                 <div
-                                  class="progress-bar-percent"
+                                  className="progress-bar-percent"
                                   data-percentage="95"
                                 >
                                   95%
                                 </div>
                                 {/*  progress-bar-percent  */}
                               </div>
-                              <div class="ttm-progress-bar" data-percent="95%">
-                                <div class="progress-bar-title">
+                              <div
+                                className="ttm-progress-bar"
+                                data-percent="95%"
+                              >
+                                <div className="progress-bar-title">
                                   Web/CMS Design
                                 </div>
                                 {/*  progress-bar-title  */}
-                                <div class="progress-bar-inner">
+                                <div className="progress-bar-inner">
                                   <div
-                                    class="progress-bar progress-bar-color-bar_skincolor"
-                                    style={{width: "95%"}}
+                                    className="progress-bar progress-bar-color-bar_skincolor"
+                                    style={{ width: "95%" }}
                                   ></div>
                                 </div>
                                 <div
-                                  class="progress-bar-percent"
+                                  className="progress-bar-percent"
                                   data-percentage="95"
                                 >
                                   95%
@@ -189,19 +206,22 @@ const AboutUs = () => {
                               </div>
                               {/*  progress-bar END  */}
                               {/*  progress-bar  */}
-                              <div class="ttm-progress-bar" data-percent="90%">
-                                <div class="progress-bar-title">
+                              <div
+                                className="ttm-progress-bar"
+                                data-percent="90%"
+                              >
+                                <div className="progress-bar-title">
                                   Web Application Development
                                 </div>
                                 {/*  progress-bar-title  */}
-                                <div class="progress-bar-inner">
+                                <div className="progress-bar-inner">
                                   <div
-                                    class="progress-bar progress-bar-color-bar_skincolor"
-                                    style={{width: "90%"}}
+                                    className="progress-bar progress-bar-color-bar_skincolor"
+                                    style={{ width: "90%" }}
                                   ></div>
                                 </div>
                                 <div
-                                  class="progress-bar-percent"
+                                  className="progress-bar-percent"
                                   data-percentage="90"
                                 >
                                   90%
@@ -210,19 +230,22 @@ const AboutUs = () => {
                               </div>
                               {/*  progress-bar END  */}
                               {/*  progress-bar  */}
-                              <div class="ttm-progress-bar" data-percent="95%">
-                                <div class="progress-bar-title">
+                              <div
+                                className="ttm-progress-bar"
+                                data-percent="95%"
+                              >
+                                <div className="progress-bar-title">
                                   Banner Production
                                 </div>
                                 {/*  progress-bar-TITLE  */}
-                                <div class="progress-bar-inner">
+                                <div className="progress-bar-inner">
                                   <div
-                                    class="progress-bar progress-bar-color-bar_skincolor"
-                                    style={{width: "95%"}}
+                                    className="progress-bar progress-bar-color-bar_skincolor"
+                                    style={{ width: "95%" }}
                                   ></div>
                                 </div>
                                 <div
-                                  class="progress-bar-percent"
+                                  className="progress-bar-percent"
                                   data-percentage="95"
                                 >
                                   95%
@@ -231,19 +254,22 @@ const AboutUs = () => {
                               </div>
                               {/*  progress-bar END  */}
                               {/*  progress-bar  */}
-                              <div class="ttm-progress-bar" data-percent="98%">
-                                <div class="progress-bar-title">
+                              <div
+                                className="ttm-progress-bar"
+                                data-percent="98%"
+                              >
+                                <div className="progress-bar-title">
                                   Image Production
                                 </div>
                                 {/*  progress-bar-title  */}
-                                <div class="progress-bar-inner">
+                                <div className="progress-bar-inner">
                                   <div
-                                    class="progress-bar progress-bar-color-bar_skincolor"
-                                    style={{width: "98%"}}
+                                    className="progress-bar progress-bar-color-bar_skincolor"
+                                    style={{ width: "98%" }}
                                   ></div>
                                 </div>
                                 <div
-                                  class="progress-bar-percent"
+                                  className="progress-bar-percent"
                                   data-percentage="98"
                                 >
                                   98%
@@ -252,19 +278,22 @@ const AboutUs = () => {
                               </div>
                               {/*  progress-bar END  */}
                               {/*  progress-bar  */}
-                              <div class="ttm-progress-bar" data-percent="95%">
-                                <div class="progress-bar-title">
+                              <div
+                                className="ttm-progress-bar"
+                                data-percent="95%"
+                              >
+                                <div className="progress-bar-title">
                                   Page Production
                                 </div>
                                 {/*  progress-bar-TITLE  */}
-                                <div class="progress-bar-inner">
+                                <div className="progress-bar-inner">
                                   <div
-                                    class="progress-bar progress-bar-color-bar_skincolor"
-                                    style={{width: "95%"}}
+                                    className="progress-bar progress-bar-color-bar_skincolor"
+                                    style={{ width: "95%" }}
                                   ></div>
                                 </div>
                                 <div
-                                  class="progress-bar-percent"
+                                  className="progress-bar-percent"
                                   data-percentage="95"
                                 >
                                   95%
@@ -285,136 +314,149 @@ const AboutUs = () => {
           {/*  about-us-section  */}
 
           {/*  fid-section  */}
-          <section class="ttm-row fid-section ttm-bgcolor-darkgrey ttm-bg ttm-bgimage-yes bg-img10 mt_225 res-991-mt-0 clearfix">
-            <div class="ttm-row-wrapper-bg-layer ttm-bg-layer"></div>
-            <div class="container">
+          <section className="ttm-row fid-section ttm-bgcolor-darkgrey ttm-bg ttm-bgimage-yes bg-img10 mt_225 res-991-mt-0 clearfix">
+            <div className="ttm-row-wrapper-bg-layer ttm-bg-layer"></div>
+            <div className="container">
               {/*  row  */}
-              <div class="row">
-                <div class="col-md-3 col-sm-6">
+              <ScrollTrigger
+                        onEnter={() => setCountOn(true)}
+                        onExit={() => setCountOn(false)}
+                      >
+                        <div className="row">
+                <div className="col-md-3 col-sm-6">
                   {/*   ttm-icon  */}
-                  <div class="ttm-fid inside ttm-fid-view-topicon">
-                    <div class="ttm-fid-icon-wrapper">
-                      <div class="ttm-icon ttm-icon_element-bgcolor-skincolor ttm-icon_element-size-lg">
+                  <div className="ttm-fid inside ttm-fid-view-topicon">
+                    <div className="ttm-fid-icon-wrapper">
+                      <div className="ttm-icon ttm-icon_element-bgcolor-skincolor ttm-icon_element-size-lg">
                         <HiOutlineBuildingLibrary className="text-white text-5xl inline-block m-auto"></HiOutlineBuildingLibrary>
                         {/*   ttm-icon  */}
                       </div>
                     </div>
-                    <div class="ttm-fid-contents">
+                    <div className="ttm-fid-contents">
                       {/*   ttm-fid-contents  */}
-                      <h4>
-                        <span
-                          data-appear-animation="animateDigits"
-                          data-from="0"
-                          data-to="25"
-                          data-interval="5"
-                          data-before=""
-                          data-before-style="sup"
-                          data-after=""
-                          data-after-style="sub"
-                        >
-                          0
-                        </span>
+                      <h4 className="my-7">
+                      {countOn && (
+                                    <CountUp
+                                      start={0}
+                                      end={25}
+                                      delay={0}
+                                      duration={3}
+                                    >
+                                      {({ countUpRef }) => (
+                                        <div>
+                                          <span ref={countUpRef} className="text-4xl" />
+                                        </div>
+                                      )}
+                                    </CountUp>
+                                  )}
                       </h4>
-                      <h3 class="ttm-fid-title">Markets</h3>
+                      <h3 className="ttm-fid-title">Markets</h3>
                       {/*   ttm-fid-title  */}
                     </div>
                     {/*  ttm-fid-contents end  */}
                   </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div className="col-md-3 col-sm-6">
                   {/*   ttm-icon  */}
-                  <div class="ttm-fid inside ttm-fid-view-topicon">
-                    <div class="ttm-fid-icon-wrapper">
-                      <div class="ttm-icon ttm-icon_element-bgcolor-skincolor ttm-icon_element-size-lg">
+                  <div className="ttm-fid inside ttm-fid-view-topicon">
+                    <div className="ttm-fid-icon-wrapper">
+                      <div className="ttm-icon ttm-icon_element-bgcolor-skincolor ttm-icon_element-size-lg">
                         <MdDeveloperMode className="text-white text-5xl inline-block m-auto"></MdDeveloperMode>
                         {/*   ttm-icon  */}
                       </div>
                     </div>
-                    <div class="ttm-fid-contents">
+                    <div className="ttm-fid-contents">
                       {/*   ttm-fid-contents  */}
-                      <h4>
-                        <span
-                          data-appear-animation="animateDigits"
-                          data-from="0"
-                          data-to="90"
-                          data-interval="5"
-                          data-before=""
-                          data-before-style="sup"
-                          data-after=""
-                          data-after-style="sub"
-                        >
-                          0
-                        </span>
+                      <h4 className="my-7">
+                      {countOn && (
+                                    <CountUp
+                                      start={0}
+                                      end={90}
+                                      delay={0}
+                                      duration={3}
+                                    >
+                                      {({ countUpRef }) => (
+                                        <div>
+                                          <span ref={countUpRef} className="text-4xl" />
+                                        </div>
+                                      )}
+                                    </CountUp>
+                                  )}
                       </h4>
-                      <h3 class="ttm-fid-title">FTE</h3>
+                      <h3 className="ttm-fid-title">FTE</h3>
                       {/*   ttm-fid-title  */}
                     </div>
                     {/*  ttm-fid-contents end  */}
                   </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div className="col-md-3 col-sm-6">
                   {/*   ttm-icon  */}
-                  <div class="ttm-fid inside ttm-fid-view-topicon">
-                    <div class="ttm-fid-icon-wrapper">
-                      <div class="ttm-icon ttm-icon_element-bgcolor-skincolor ttm-icon_element-size-lg">
+                  <div className="ttm-fid inside ttm-fid-view-topicon">
+                    <div className="ttm-fid-icon-wrapper">
+                      <div className="ttm-icon ttm-icon_element-bgcolor-skincolor ttm-icon_element-size-lg">
                         <Ri24HoursLine className="text-white text-5xl inline-block m-auto"></Ri24HoursLine>
                         {/*   ttm-icon  */}
                       </div>
                     </div>
-                    <div class="ttm-fid-contents">
+                    <div className="ttm-fid-contents">
                       {/*   ttm-fid-contents  */}
-                      <h4>
-                        <span
-                          data-appear-animation="animateDigits"
-                          data-from="0"
-                          data-to="13214"
-                          data-interval="5"
-                          data-before=""
-                          data-before-style="sup"
-                          data-after=""
-                          data-after-style="sub"
-                        >
-                          0
-                        </span>
+                      <h4 className="my-7">
+                      {countOn && (
+                                    <CountUp
+                                      start={0}
+                                      end={13214}
+                                      delay={0}
+                                      duration={3}
+                                    >
+                                      {({ countUpRef }) => (
+                                        <div>
+                                          <span ref={countUpRef} className="text-4xl" />
+                                        </div>
+                                      )}
+                                    </CountUp>
+                                  )}
                       </h4>
-                      <h3 class="ttm-fid-title">Jobs Completed</h3>
+                      <h3 className="ttm-fid-title">Jobs Completed</h3>
                       {/*   ttm-fid-title  */}
                     </div>
                     {/*  ttm-fid-contents end  */}
                   </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div className="col-md-3 col-sm-6">
                   {/*   ttm-icon  */}
-                  <div class="ttm-fid inside ttm-fid-view-topicon">
-                    <div class="ttm-fid-icon-wrapper">
-                      <div class="ttm-icon ttm-icon_element-bgcolor-skincolor ttm-icon_element-size-lg">
+                  <div className="ttm-fid inside ttm-fid-view-topicon">
+                    <div className="ttm-fid-icon-wrapper">
+                      <div className="ttm-icon ttm-icon_element-bgcolor-skincolor ttm-icon_element-size-lg">
                         <TbReportSearch className="text-white text-5xl inline-block m-auto"></TbReportSearch>
                         {/*   ttm-icon  */}
                       </div>
                     </div>
-                    <div class="ttm-fid-contents">
+                    <div className="ttm-fid-contents">
                       {/*   ttm-fid-contents  */}
-                      <h4>
-                        <span
-                          data-appear-animation="animateDigits"
-                          data-from="0"
-                          data-to="323510"
-                          data-interval="5"
-                          data-before=""
-                          data-before-style="sup"
-                          data-after=""
-                          data-after-style="sub"
-                        >
-                          0
-                        </span>
+                      <h4 className="my-7">
+                      {countOn && (
+                                    <CountUp
+                                      start={0}
+                                      end={323510}
+                                      delay={0}
+                                      duration={3}
+                                    >
+                                      {({ countUpRef }) => (
+                                        <div>
+                                          <span ref={countUpRef} className="text-4xl" />
+                                        </div>
+                                      )}
+                                    </CountUp>
+                                  )}
                       </h4>
-                      <h3 class="ttm-fid-title">Deliverables</h3>
+                      <h3 className="ttm-fid-title">Deliverables</h3>
                       {/*   ttm-fid-title  */}
                     </div>
                     {/*  ttm-fid-contents end  */}
                   </div>
                 </div>
               </div>
+                      </ScrollTrigger>
               {/*  row end */}
             </div>
           </section>

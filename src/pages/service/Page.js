@@ -8,7 +8,7 @@ import ScrollTrigger from "react-scroll-trigger";
 import CountUp from "react-countup";
 import { useState } from "react";
 
-const WebAppDevelopment = () => {
+const Page = () => {
   const [countOn, setCountOn] = useState(false);
   return (
     <div className="site-main">
@@ -20,7 +20,7 @@ const WebAppDevelopment = () => {
               <div className="col-md-12">
                 <div className="title-box text-center">
                   <div className="page-title-heading">
-                    <h1 className="title">Web Application Development</h1>
+                    <h1 className="title">Newspaper Advertisement</h1>
                   </div>
                   {/*  /.page-title-captions  */}
                   <div className="breadcrumb-wrapper flex justify-center items-center">
@@ -35,7 +35,7 @@ const WebAppDevelopment = () => {
                       </a>
                     </span>
                     <span className="ttm-bread-sep">&nbsp; : : &nbsp;</span>
-                    <span>Web Development</span>
+                    <span>Page Production</span>
                   </div>
                 </div>
               </div>
@@ -55,30 +55,30 @@ const WebAppDevelopment = () => {
             {/*  row  */}
             <div className="row">
               <div className="col-lg-9 content-area order-lg-2">
-                {/*  ttm-service-single-content-are  */}
-                {/*  ttm-service-single-content-are  */}
                 <div className="ttm-service-single-content-area">
                   <div className="ttm_single_image-wrapper mb-35">
                     <img
                       className="img-fluid"
-                      src="http://www.shehala.com/public/frontend/images/webdevelopment.jpg"
+                      src="http://www.shehala.com/public/frontend/images/grap.jpg"
                       alt="single-img-twelve"
                     />
                   </div>
                   <div className="ttm-service-description">
-                    <h5>Iphone and Android Application:</h5>
                     <p>
-                      Mobile application for Brand Shops all over the Europe. It
-                      is possible to find YOUR favorite brand of clothes, shoes
-                      and accessories through our application, City Brands. It
-                      helps you to get a quick overview of the shops that just
-                      sell your favorite brand in a city you do not know much
-                      about. With a few clicks you can get guidance via map mode
-                      view store contact information (phone number and email
-                      address) and identify which other brands store retailer.
-                      City Brands affects a wide range of Danish cities, and
-                      make your search for specific brands much easier.
+                      For any kind of promotion Newspaper advertisement plays
+                      vital role for business growth. For reaching people very
+                      quickly, Newspaper advertisement is very popular in the
+                      world. There are print versions and digital versions are
+                      available in the modern age. At Shehala IT Limited we are
+                      producing ample of Newspaper Advertisements for Danish
+                      News Agencies and famous individual Newspapers. We have 11
+                      years of experience creating advertisement design. Our
+                      dedicated design team has had long experience of making
+                      Creative Newspaper Advertisement. Sometimes our designer
+                      used specific template and layout to meeting clients
+                      needs.
                     </p>
+
                     <ScrollTrigger
                         onEnter={() => setCountOn(true)}
                         onExit={() => setCountOn(false)}
@@ -186,98 +186,29 @@ const WebAppDevelopment = () => {
                           </div>
                         </div>
                       </ScrollTrigger>
-                    <h5>Iphone Application:</h5>
-                    <p>
-                      With Classic Race Aarhus app you all the time is updated
-                      in relation to the latest news, maps, program, race
-                      program, drivers, live results, tickets, sponsors, videos,
-                      photo gallery and much else that moves in connection with
-                      the Classic Race Aarhus. If you have with this app so all
-                      the information you need in connection with the Classic
-                      Race Aarhus, allowing you to easily and quickly in
-                      connection with the race can keep up – either from the
-                      sidelines when the cars whiz past, or if you just want to
-                      be updated.
-                    </p>
-                    <h5>Online Christmas Calendar System:</h5>
-                    <p>
-                      During all the Christmas day starting with December 1 the
-                      client will get the opportunity to insert questions,
-                      sponsors as well as choosing winners for the Interactive
-                      Christmas Quiz calendar.
-                    </p>
-
-                    <h5>File Manager Desktop Application:</h5>
-                    <p>
-                      Description: Managing, Uploading, Downloading, Checking
-                      and Deleting Print Ready PDF for the group of Agencies and
-                      Customers. It makes easy while there is an option for
-                      chatting/commenting on each files and see the output live.
-                    </p>
-
-                    <h5>HTML5 Banner with Dynamic Backend:</h5>
-                    <p>
-                      Banner items can be changed dynamically from the backend
-                      by the backend users/clients. There are also options to
-                      see the click counts on every banners.
-                    </p>
-
-                    <h5>Online system for ordering the banners:</h5>
-                    <p>
-                      Through this online ordering system the banner clients can
-                      send banner jobs directly, they can even check the status,
-                      change the banner animations if necessary etc.
-                    </p>
-
-                    <h5>Catalog conversion system to flipbook:</h5>
-                    <p>
-                      Online catalog conversion from PDF to interactive Flipbook
-                      format.
-                    </p>
-
-                    <h5>Mobile and Desktop Games:</h5>
-                    <p>
-                      We have developed several games both for mobile and
-                      desktop platform. The mobile games in the app store and
-                      google play are: Fly Copter, Tennis Juggle and for the
-                      desktop platform the game names are – Co2 Connie(Shooting)
-                    </p>
                   </div>
                 </div>
-                {/*  ttm-service-single-content-are end  */}
               </div>
               <div className="col-lg-3 widget-area">
                 <aside className="widget widget-nav-menu">
                   <ul className="widget-menu">
                     <li className="null">
-                      <Link to="/service/web-development">
-                        Web Development
-                      </Link>
+                      <Link to="/service/web-development">Web Development</Link>
                     </li>
                     <li className="null">
-                      <Link to="/service/ecommerce">
-                        Ecommerce Development
-                      </Link>
+                      <Link to="/service/ecommerce">Ecommerce Development</Link>
                     </li>
                     <li className="null">
-                      <Link to="/service/cms">
-                        CMS Extensions
-                      </Link>
+                      <Link to="/service/cms">CMS Extensions</Link>
                     </li>
                     <li className="null">
-                      <Link to="/service/banner">
-                        Banner Production
-                      </Link>
+                      <Link to="/service/banner">Banner Production</Link>
                     </li>
                     <li className="null">
-                      <Link to="/service/image">
-                        Image Production
-                      </Link>
+                      <Link to="/service/image">Image Production</Link>
                     </li>
-                    <li className="null">
-                      <Link to="/service/page">
-                        Page Production
-                      </Link>
+                    <li className="active">
+                      <Link to="/service/page">Page Production</Link>
                     </li>
                   </ul>
                 </aside>
@@ -332,4 +263,4 @@ const WebAppDevelopment = () => {
   );
 };
 
-export default WebAppDevelopment;
+export default Page;

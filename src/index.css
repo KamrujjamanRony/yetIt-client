@@ -250,3 +250,69 @@ code {
 .my-slider {
   width: 100% !important;
 }
+
+.ttm-btn-bgcolor-skincolor {
+  background-color: #597e82;
+}
+
+.tooltip:after,
+.tooltip-top:after {
+  transform: translateX(-50%);
+  border-color: var(--tooltip-color) transparent transparent transparent;
+  top: -107%;
+  left: 50%;
+  right: auto;
+  bottom: var(--tooltip-tail-offset);
+}
+
+.tooltip-bottom:after {
+  transform: translateX(-50%);
+  border-color: transparent transparent var(--tooltip-color) transparent;
+  left: 15%;
+  right: auto;
+  bottom: -245%;
+}
+
+.tooltip-bottom:before {
+  transform: translateX(-50%);
+  left: 55%;
+  right: auto;
+  bottom: -65%;
+}
+
+.menu > ul.dropdown > li:hover a {
+  background-color: white !important;
+}
+.menu > ul.dropdown > li a:visited {
+  background-color: white !important;
+}
+
+.ttm-tabs.ttm-tab-style-classic.style1 ul.tabs li button {
+  width: 100%;
+  padding: 15px 15px 23px;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+  outline: 0;
+}
+
+.ttm-tabs.ttm-tab-style-classic.style1 ul.tabs li button:before {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  width: 13px;
+  height: 13px;
+  border-width: 0 0 1px 1px;
+  transform: translateX(-50%) rotate(-45deg);
+  -webkit-transition-delay: 0.07s;
+  -moz-transition-delay: 0.07s;
+  -o-transition-delay: 0.07s;
+  transition-delay: 0.07s;
+  box-sizing: border-box;
+}
+
+.ttm-tabs.ttm-tab-style-classic.style1 ul.tabs li.active button:before {
+  background-color: #597e82;
+}

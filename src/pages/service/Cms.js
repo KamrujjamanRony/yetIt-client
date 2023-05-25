@@ -8,10 +8,10 @@ import ScrollTrigger from "react-scroll-trigger";
 import CountUp from "react-countup";
 import { useState } from "react";
 
-const WebAppDevelopment = () => {
+const Cms = () => {
   const [countOn, setCountOn] = useState(false);
-  return (
-    <div className="site-main">
+    return (
+        <div className="site-main">
       {/*  page-title  */}
       <div className="webdesign-bg">
         <div className="ttm-page-title-row">
@@ -20,7 +20,7 @@ const WebAppDevelopment = () => {
               <div className="col-md-12">
                 <div className="title-box text-center">
                   <div className="page-title-heading">
-                    <h1 className="title">Web Application Development</h1>
+                    <h1 className="title">Wordpress Plugin Development</h1>
                   </div>
                   {/*  /.page-title-captions  */}
                   <div className="breadcrumb-wrapper flex justify-center items-center">
@@ -35,7 +35,7 @@ const WebAppDevelopment = () => {
                       </a>
                     </span>
                     <span className="ttm-bread-sep">&nbsp; : : &nbsp;</span>
-                    <span>Web Development</span>
+                    <span>CMS Extensions</span>
                   </div>
                 </div>
               </div>
@@ -54,32 +54,15 @@ const WebAppDevelopment = () => {
           <div className="container contain">
             {/*  row  */}
             <div className="row">
-              <div className="col-lg-9 content-area order-lg-2">
-                {/*  ttm-service-single-content-are  */}
-                {/*  ttm-service-single-content-are  */}
-                <div className="ttm-service-single-content-area">
-                  <div className="ttm_single_image-wrapper mb-35">
-                    <img
-                      className="img-fluid"
-                      src="http://www.shehala.com/public/frontend/images/webdevelopment.jpg"
-                      alt="single-img-twelve"
-                    />
-                  </div>
-                  <div className="ttm-service-description">
-                    <h5>Iphone and Android Application:</h5>
-                    <p>
-                      Mobile application for Brand Shops all over the Europe. It
-                      is possible to find YOUR favorite brand of clothes, shoes
-                      and accessories through our application, City Brands. It
-                      helps you to get a quick overview of the shops that just
-                      sell your favorite brand in a city you do not know much
-                      about. With a few clicks you can get guidance via map mode
-                      view store contact information (phone number and email
-                      address) and identify which other brands store retailer.
-                      City Brands affects a wide range of Danish cities, and
-                      make your search for specific brands much easier.
-                    </p>
-                    <ScrollTrigger
+            <div className="col-lg-9 content-area order-lg-2">
+                        <div className="ttm-service-single-content-area">
+                            <div className="ttm_single_image-wrapper mb-35">
+                                <img className="img-fluid" src="http://www.shehala.com/public/frontend/images/Responsive-Design-1.jpg" alt="single-img-twelve"/>
+                            </div>
+                            <div className="ttm-service-description">
+
+                            <p>We at Shehala IT Limited are proud of being the best WordPress plugin development solution across the nation and worldwide. We aren’t just limited to Plugins, we also specialize in theme designs &amp; developments.In fact, here at Shehala IT Limited, we have a dedicated team of experienced and innovative WordPress Plugin developers ready to meet your needs. During the last two years, our expert developers have helped hundreds of businesses get and maintain WordPress Plugins— with ease &amp; efficiency.</p>
+                            <ScrollTrigger
                         onEnter={() => setCountOn(true)}
                         onExit={() => setCountOn(false)}
                       >
@@ -186,66 +169,28 @@ const WebAppDevelopment = () => {
                           </div>
                         </div>
                       </ScrollTrigger>
-                    <h5>Iphone Application:</h5>
-                    <p>
-                      With Classic Race Aarhus app you all the time is updated
-                      in relation to the latest news, maps, program, race
-                      program, drivers, live results, tickets, sponsors, videos,
-                      photo gallery and much else that moves in connection with
-                      the Classic Race Aarhus. If you have with this app so all
-                      the information you need in connection with the Classic
-                      Race Aarhus, allowing you to easily and quickly in
-                      connection with the race can keep up – either from the
-                      sidelines when the cars whiz past, or if you just want to
-                      be updated.
-                    </p>
-                    <h5>Online Christmas Calendar System:</h5>
-                    <p>
-                      During all the Christmas day starting with December 1 the
-                      client will get the opportunity to insert questions,
-                      sponsors as well as choosing winners for the Interactive
-                      Christmas Quiz calendar.
-                    </p>
 
-                    <h5>File Manager Desktop Application:</h5>
-                    <p>
-                      Description: Managing, Uploading, Downloading, Checking
-                      and Deleting Print Ready PDF for the group of Agencies and
-                      Customers. It makes easy while there is an option for
-                      chatting/commenting on each files and see the output live.
-                    </p>
+                                <h5>We are committed to provide for your multiplex requirement:</h5>
+                                <ul>
+                                <li><i className="fa fa-check-circle ttm-textcolor-skincolor"></i> WP Plugin Development</li>
+                                <li><i className="fa fa-check-circle ttm-textcolor-skincolor"></i> WP Plugin Installation</li>
+                                <li><i className="fa fa-check-circle ttm-textcolor-skincolor"></i> WP Plugin Customization</li>
+                                <li><i className="fa fa-check-circle ttm-textcolor-skincolor"></i> WP Plugin Integration</li>
+                                <li><i className="fa fa-check-circle ttm-textcolor-skincolor"></i> WP Plugin Upgrades</li>
+                                </ul><br/>
+                                <h5>After Service Support:</h5>
 
-                    <h5>HTML5 Banner with Dynamic Backend:</h5>
-                    <p>
-                      Banner items can be changed dynamically from the backend
-                      by the backend users/clients. There are also options to
-                      see the click counts on every banners.
-                    </p>
-
-                    <h5>Online system for ordering the banners:</h5>
-                    <p>
-                      Through this online ordering system the banner clients can
-                      send banner jobs directly, they can even check the status,
-                      change the banner animations if necessary etc.
-                    </p>
-
-                    <h5>Catalog conversion system to flipbook:</h5>
-                    <p>
-                      Online catalog conversion from PDF to interactive Flipbook
-                      format.
-                    </p>
-
-                    <h5>Mobile and Desktop Games:</h5>
-                    <p>
-                      We have developed several games both for mobile and
-                      desktop platform. The mobile games in the app store and
-                      google play are: Fly Copter, Tennis Juggle and for the
-                      desktop platform the game names are – Co2 Connie(Shooting)
-                    </p>
-                  </div>
-                </div>
-                {/*  ttm-service-single-content-are end  */}
-              </div>
+                                <p>If you have ever installed a WordPress Plugin, then you know what it means when you realize all kinds of ugly red flashing banners or text on your dashboard. With Shehala IT Limited, you will never need to worry about those messages because:</p>
+                                <ul>
+                                <li><i className="fa fa-check-circle ttm-textcolor-skincolor"></i> We handle all improvements to our Custom Plugins, nevertheless of the theme you choose</li>
+                                <li><i className="fa fa-check-circle ttm-textcolor-skincolor"></i> Our Plugins are carefully designed with future changes &amp; updates in mind</li>
+                                <li><i className="fa fa-check-circle ttm-textcolor-skincolor"></i> We promise our custom WordPress Plugins will never leave your site or information weak to hackers or identity thieves</li>
+                                <li><i className="fa fa-check-circle ttm-textcolor-skincolor"></i> 24/6 Customer &amp; Technical Support available by Chat &amp; Email</li>
+                                </ul><br/>
+                           <p> Business Owners that want professional websites with useful dynamic elements need look no further than the WordPress platform &amp; our Custom Plugin developers.</p>
+                            </div>
+                        </div>
+                    </div>
               <div className="col-lg-3 widget-area">
                 <aside className="widget widget-nav-menu">
                   <ul className="widget-menu">
@@ -259,7 +204,7 @@ const WebAppDevelopment = () => {
                         Ecommerce Development
                       </Link>
                     </li>
-                    <li className="null">
+                    <li className="active">
                       <Link to="/service/cms">
                         CMS Extensions
                       </Link>
@@ -329,7 +274,7 @@ const WebAppDevelopment = () => {
       </div>
       {/* site-main end */}
     </div>
-  );
+    );
 };
 
-export default WebAppDevelopment;
+export default Cms;

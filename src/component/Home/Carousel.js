@@ -8,6 +8,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { Link } from 'react-router-dom';
 
 const Carousel = () => {
   return (
@@ -20,8 +21,6 @@ const Carousel = () => {
       loop={true}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
       style={{
         backgroundImage:
           "url('http://www.shehala.com/public/frontend/images/slides/slider-mainbg-003.jpg')",
@@ -55,12 +54,12 @@ const Carousel = () => {
                 your online application? Yes! you are in the right place! We are
                 best for 100% secured.
               </p>
-              <button className="btn btn-primary rounded-none text-white hover:bg-accent font-semibold normal-case text-sm px-9 mr-7 my-2">
+              <Link to="/service/cms" className="btn btn-primary rounded-none text-white hover:bg-accent font-semibold normal-case text-sm px-9 mr-7 my-2">
                 View More Details
-              </button>
-              <button className="btn btn-outline btn-accent rounded-none font-semibold normal-case text-sm px-9 my-2">
+              </Link>
+              <Link to="/contact" className="btn btn-outline btn-accent rounded-none font-semibold normal-case text-sm px-9 my-2">
                 Contact Us
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -94,12 +93,12 @@ const Carousel = () => {
                 your online application? Yes! you are in the right place! We are
                 best for 100% secured.
               </p>
-              <button className="btn btn-primary rounded-none text-white hover:bg-accent font-semibold normal-case text-sm px-9 mr-7 my-2">
+              <Link to="/service/" className="btn btn-primary rounded-none text-white hover:bg-accent font-semibold normal-case text-sm px-9 mr-7 my-2">
                 Read More
-              </button>
-              <button className="btn btn-outline btn-accent rounded-none font-semibold normal-case text-sm px-9 my-2">
+              </Link>
+              <Link to="/contact" className="btn btn-outline btn-accent rounded-none font-semibold normal-case text-sm px-9 my-2">
                 Request a Quote
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -130,12 +129,12 @@ const Carousel = () => {
                 your online application? Yes! you are in the right place! We are
                 best for 100% secured.
               </p>
-              <button className="btn btn-primary rounded-none text-white hover:bg-accent font-semibold normal-case text-sm px-9 mr-7 my-2">
+              <Link to="/service/ecommerce" className="btn btn-primary rounded-none text-white hover:bg-accent font-semibold normal-case text-sm px-9 mr-7 my-2">
                 View More Details
-              </button>
-              <button className="btn btn-outline btn-accent rounded-none font-semibold normal-case text-sm px-9 my-2">
+              </Link>
+              <Link to="/contact" className="btn btn-outline btn-accent rounded-none font-semibold normal-case text-sm px-9 my-2">
                 Contact Us
-              </button>
+              </Link>
             </div>
           </div>
         </div>

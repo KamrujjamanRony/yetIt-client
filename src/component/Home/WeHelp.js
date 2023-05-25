@@ -1,4 +1,5 @@
 import { FaPlay } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const WeHelp = () => {
     return (
@@ -41,12 +42,12 @@ const WeHelp = () => {
                   </div>
                   {/* <!-- section-title end --> */}
                   <div className="mt-40">
-                    <a
-                      href="http://www.shehala.com/portfolio"
+                    <Link
+                      to="/portfolio"
                       className="ttm-btn ttm-btn-size-md ttm-btn-style-border ttm-btn-color-white"
                     >
                       View Portfolio
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

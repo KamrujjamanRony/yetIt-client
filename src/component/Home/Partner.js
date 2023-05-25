@@ -9,15 +9,13 @@ import "swiper/css";
 const Partner = () => {
   return (
     <div className="ttm-row our-partner-section ttm-bgcolor-skincolor mt_90 res-991-mt-0 clearfix">
-      <div className="container">
+      <div className="container contain">
       <Swiper
       // install Swiper modules
       modules={[ A11y]}
       spaceBetween={50}
       slidesPerView={4}
       loop={true}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
     >
       <SwiperSlide>
         <div className="client-box ttm-box-view-boxed-logo">

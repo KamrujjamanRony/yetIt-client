@@ -154,9 +154,9 @@
   top: 0;
   left: 0;
 }
-.ttm-left-span .ttm-col-wrapper-bg-layer {
+.ttm-right-span .ttm-col-wrapper-bg-layer {
   width: auto;
-  margin-left: -100px;
+  margin-right: -500px;
   right: 0;
 }
 .ttm-bg.ttm-bgimage-yes > .ttm-bg-layer,
@@ -232,13 +232,13 @@
   background-position: center;
 }
 .bg-img7 {
-  background-image: url("http://www.shehala.com/public/frontend/images/bg-image/row-bgimage-7.jpg");
+  background-image: url("http://www.shehala.com/public/frontend/images/bg-image/row-bgimage-7.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .bg-img8 {
-  background-image: url("http://www.shehala.com/public/frontend/images/bg-image/row-bgimage-8.jpg");
+  background-image: url("http://www.shehala.com/public/frontend/images/bg-image/row-bgimage-8.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2128,7 +2128,8 @@ body {
 .ttm-tabs ul.tabs li {
   display: inline-block;
 }
-.ttm-tabs ul.tabs li a {
+.ttm-tabs ul.tabs li button {
+  color: #263045;
   display: block;
   cursor: pointer;
   padding: 8px 22px;
@@ -2143,14 +2144,15 @@ body {
   font-weight: 500;
   text-transform: uppercase;
   border: 1px solid #263045;
+  outline: 0;
 }
-.ttm-tabs ul.tabs li a i {
+.ttm-tabs ul.tabs li button i {
   font-size: 18px;
   margin-right: 9px;
   position: relative;
   top: 2px;
 }
-.ttm-tabs ul.tabs li a span {
+.ttm-tabs ul.tabs li button span {
   font-size: 18px;
   font-weight: normal;
 }

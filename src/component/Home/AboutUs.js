@@ -1,4 +1,3 @@
-import React from 'react';
 import { TfiMedall, TfiBookmarkAlt } from "react-icons/tfi";
 
 const AboutUs = () => {
@@ -26,7 +25,7 @@ const AboutUs = () => {
                   <div className="section-title with-desc clearfix">
                     <div className="title-header">
                       <h5>About Shehala IT Limited</h5>
-                      <h3 className="title">
+                      <h3 className="title text-3xl bold font-medium">
                         Shehala IT grew from four persons company to a 100
                         persons company with in 14 years by repeatedly
                         delivering client satisfaction.

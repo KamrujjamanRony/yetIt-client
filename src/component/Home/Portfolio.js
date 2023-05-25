@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
     return (
@@ -190,13 +191,13 @@ const Portfolio = () => {
               </div>
 
               <div className="ttm-btn-box pb-20 view-morbtn">
-                <a
+                <Link
                   className="ttm-btn ttm-btn-size-lg ttm-btn-shape-square ttm-icon-btn-right ttm-btn-bgcolor-skincolor"
-                  href="http://www.shehala.com/portfolio"
+                  to="/portfolio"
                   title=""
                 >
                   View More <i className="ti ti-arrow-circle-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
             {/* <!-- row end --> */}

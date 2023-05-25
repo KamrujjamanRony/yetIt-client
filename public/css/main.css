@@ -1001,7 +1001,7 @@ h6.ttm-textcolor-skincolor {
 #site-header-menu #site-navigation .menu ul li a span,
 .ttm-icon_element-bgcolor-skincolor,
 .ttm-btn-bgcolor-skincolor,
-.ttm-tabs ul.tabs li.active a,
+.ttm-tabs ul.tabs li.active button,
 .widget .widget-title:after,
 .ttm-btn-bgcolor-darkgrey:hover,
 .ttm-btn.ttm-btn-color-skincolor.ttm-btn-style-border:hover,
@@ -1092,7 +1092,7 @@ input[type="color"]:focus,
 .skin-border .with-top-border img,
 .ttm-bgcolor-skincolor .panel-title > a,
 .ttm-header-style-01 .ttm-header-icons .ttm-header-search-link a:hover,
-.ttm-tabs ul.tabs li.active a,
+.ttm-tabs ul.tabs li.active button,
 .ttm-blog-classic .ttm-blog-classic-content blockquote,
 .ttm-header-icons .ttm-header-search-link a:hover,
 .footer .social-icons li > a:hover,
@@ -1145,7 +1145,7 @@ div.product ul.tabs li.active a:before,
 #site-header-menu #site-navigation .menu ul li > a,
 .sidebar .widget a,
 .ttm-pagination .page-numbers,
-.ttm-tabs ul.tabs li a,
+.ttm-tabs ul.tabs li button,
 .ttm-list.ttm-list-style-icon li,
 .about-text-box,
 .accordion.style2 .toggle .toggle-title a,
@@ -1287,7 +1287,7 @@ a.ttm-btn-bgcolor-skincolor:hover {
 .ttm-bgcolor-darkgrey .featured-title h5,
 .ttm-bgcolor-skincolor .inside h3,
 .ttm-bgcolor-darkgrey .inside h3,
-.ttm-tabs ul.tabs li.active a,
+.ttm-tabs ul.tabs li.active button,
 .ttm-btn.ttm-btn-bgcolor-darkgrey,
 .ttm-bgcolor-skincolor .featured-title h6,
 .ttm-bgcolor-darkgrey .ttm-progress-bar .progress-bar-title,
@@ -1774,7 +1774,7 @@ a.ttm-btn-bgcolor-skincolor:hover {
   left: 100%;
   top: 0;
 }
-#site-header-menu #site-navigation .menu ul li > a {
+#site-header-menu #site-navigation .menu ul li > Link {
   font-weight: 600;
   text-transform: uppercase;
   font-size: 14px;
@@ -3164,7 +3164,7 @@ h1 {
 }
 
 .portfolio-bg {
-  padding-top: 140px;
+  padding-top: 144px;
 }
 
 .ttm-textcolor-skincolor {

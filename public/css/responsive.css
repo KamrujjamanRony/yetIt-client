@@ -32,6 +32,11 @@
   .site-main .ttm-sidebar {
     padding: 10px 0px 8px 0px;
   }
+  #site-header-menu #site-navigation .menu.active,
+  #site-header-menu #site-navigation .menu > ul ul.active {
+    max-height: 55em;
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -45,6 +50,16 @@
     height: 93px;
   }
   #site-header-menu #site-navigation .menu ul > li > a {
+    display: block;
+    margin: 0px;
+    padding: 0px 17px 0px 17px;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    height: 100px;
+    line-height: 100px;
+  }
+  #site-header-menu #site-navigation .menu ul > li > Link {
     display: block;
     margin: 0px;
     padding: 0px 17px 0px 17px;
@@ -107,21 +122,21 @@
     -o-transform: scale(1, 1);
     transform: scale(1, 1);
   }
-  #site-header-menu #site-navigation .menu > ul > li > ul > li a {
+  #site-header-menu #site-navigation .menu > ul > li > ul > li Link {
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
     -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
   }
-  #site-header-menu #site-navigation .menu > ul > li ul a {
+  #site-header-menu #site-navigation .menu > ul > li ul Link {
     -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
   }
-  #site-header-menu #site-navigation .menu > ul ul li:hover > a {
+  #site-header-menu #site-navigation .menu > ul ul li:hover > Link {
     padding-left: 25px;
   }
-  #site-header-menu #site-navigation .menu > ul > li ul a:before {
+  #site-header-menu #site-navigation .menu > ul > li ul Link:before {
     font-size: 24px;
     line-height: 9px;
     content: "";
@@ -204,6 +219,16 @@
     height: 93px;
     line-height: 93px;
   }
+  .ttm-header-style-01
+    #site-header-menu
+    #site-navigation
+    .menu
+    > ul
+    > li
+    > Link {
+    height: 93px;
+    line-height: 93px;
+  }
   .ttm-header-style-01 .ttm-stickable-header-w,
   .ttm-header-style-03 .ttm-stickable-header-w {
     position: absolute;
@@ -222,7 +247,7 @@
     display: none;
   }
   #site-header-menu #site-navigation > ul li > a,
-  #site-header-menu #site-navigation .menu ul > li ul li > a {
+  #site-header-menu #site-navigation .menu ul > li ul li > Link {
     margin: 0;
     display: block;
     padding: 15px 15px 15px 15px;
@@ -947,7 +972,7 @@
   /* sidebar-right*/
   .sidebar .col-lg-9.content-area {
     flex: 0 0 70%;
-    max-width: 70%;
+    max-width: 100%;
   }
   .sidebar .col-lg-3.widget-area {
     flex: 0 0 30%;

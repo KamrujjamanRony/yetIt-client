@@ -15,7 +15,6 @@ const Home = () => {
     return (
         <div>
             <Carousel />
-            {/* <HomeSlider /> */}
             <div className="site-main">
                 <AboutUs />
                 <Summary />

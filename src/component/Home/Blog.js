@@ -2,11 +2,16 @@
 import { A11y } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FiPlus } from "react-icons/fi";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 // Import Swiper styles
 import "swiper/css";
+import { Link } from "react-router-dom";
+import useBlogs from "../../hook/useBlogs";
 
 const Blog = () => {
+  const [blogs] = useBlogs();
   return (
     <section className="ttm-row blog-section clearfix">
       <div className="container contain">
@@ -24,40 +29,30 @@ const Blog = () => {
             {/* <!-- section title end --> */}
           </div>
         </div>
-
-        {/* <!-- row --> */}
-        <div className="row">
           {/* <!-- blog-slide --> */}
           <div
-            className="blog-slide owl-carousel owl-theme owl-loaded owl-rtl"
-            data-item="3"
-            data-nav="false"
-            data-dots="false"
-            data-auto="false"
+            className="blog-slide"
           >
-            {/* <!-- featured-imagebox-blog --> */}
             <Swiper
               // install Swiper modules
               modules={[A11y]}
               spaceBetween={50}
               slidesPerView={3}
               loop={true}
-              onSwiper={(swiper) => console.log(swiper)}
-              onSlideChange={() => console.log("slide change")}
             >
-              <SwiperSlide>
+              {blogs?.map(blog=><SwiperSlide key={blog?.id}>
                 <div className="featured-imagebox featured-imagebox-blog">
                   <div className="featured-thumbnail">
                     {/* <!-- featured-thumbnail --> */}
                     <img
                       className="img-fluid"
-                      src="http://www.shehala.com/public/frontend/images/blog/online_business.png"
+                      src={blog?.image}
                       alt=""
                     />
                     <div className="ttm-blog-overlay-iconbox">
-                      <a href="http://www.shehala.com/7-image-editing-tips-to-dominate-in-online-business">
-                        <i className="ti ti-plus"></i>
-                      </a>
+                      <Link to={`/blog/${blog?.id}`}>
+                        <FiPlus className="text-4xl"></FiPlus>
+                      </Link>
                     </div>
                     <div className="ttm-box-view-overlay"></div>
                   </div>
@@ -69,19 +64,17 @@ const Blog = () => {
                         <time
                           className="entry-date"
                           dateTime="2019-01-16T07:07:55+00:00"
-                        >
-                          10
-                          <span className="entry-month entry-year">Feb</span>
+                        >{blog?.date.split(" ")[1].slice(0,2)}
+                          <span className="entry-month entry-year">{blog?.date.split(" ")[0].slice(0,3)}</span>
                         </time>
                       </span>
                     </div>
                     <div className="featured-title">
                       {/* <!-- featured-title --> */}
                       <h5>
-                        <a href="http://www.shehala.com/7-image-editing-tips-to-dominate-in-online-business">
-                          Seven Image Editing Tips To Dominate In Online
-                          Business
-                        </a>
+                        <Link to={`/blog/${blog?.id}`}>
+                          {blog?.title}
+                        </Link>
                       </h5>
                     </div>
                     <div className="post-meta">
@@ -96,410 +89,22 @@ const Blog = () => {
                     <div className="featured-desc">
                       {/* <!-- featured-description --> */}
                       <p>
-                        If you are planning to set up an online business or take
-                        your business ahead, you should consider...
+                        {blog?.description[0].slice(0,100)}...
                       </p>
                     </div>
-                    <a
+                    <Link
                       className="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-20"
-                      href="http://www.shehala.com/7-image-editing-tips-to-dominate-in-online-business"
+                      to={`/blog/${blog?.id}`}
                     >
-                      Read More <i className="ti ti-angle-double-right"></i>
-                    </a>
+                      Read More <MdKeyboardDoubleArrowRight className="inline text-xl mb-1"></MdKeyboardDoubleArrowRight>
+                    </Link>
                   </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="featured-imagebox featured-imagebox-blog">
-                  <div className="featured-thumbnail">
-                    {/* <!-- featured-thumbnail --> */}
-                    <img
-                      className="img-fluid"
-                      src="http://www.shehala.com/public/frontend/images/blog/visual_content.png"
-                      alt=""
-                    />
-                    <div className="ttm-blog-overlay-iconbox">
-                      <a href="http://www.shehala.com/8-reasons-why-visual-content-is-important-for-online-marketing">
-                        <i className="ti ti-plus"></i>
-                      </a>
-                    </div>
-                    <div className="ttm-box-view-overlay"></div>
-                  </div>
-                  <div className="featured-content">
-                    {/* <!-- featured-content --> */}
-                    <div className="ttm-box-post-date">
-                      {/* <!-- ttm-box-post-date --> */}
-                      <span className="ttm-entry-date">
-                        <time
-                          className="entry-date"
-                          dateTime="2019-01-16T07:07:55+00:00"
-                        >
-                          13
-                          <span className="entry-month entry-year">Feb</span>
-                        </time>
-                      </span>
-                    </div>
-                    <div className="featured-title">
-                      {/* <!-- featured-title --> */}
-                      <h5>
-                        <a href="http://www.shehala.com/8-reasons-why-visual-content-is-important-for-online-marketing">
-                          Eight Reasons Why Visual Content is Important for
-                          Online Marketing
-                        </a>
-                      </h5>
-                    </div>
-                    <div className="post-meta">
-                      {/* <!-- post-meta --> */}
-                      <span className="ttm-meta-line">
-                        <i className="fa fa-comments"></i> comments
-                      </span>
-                      <span className="ttm-meta-line">
-                        <i className="fa fa-user"></i> Shehala
-                      </span>
-                    </div>
-                    <div className="featured-desc">
-                      {/* <!-- featured-description --> */}
-                      <p>
-                        Every day millions of contents are posted online in
-                        different forms of posts like blog articles, e-books
-                      </p>
-                    </div>
-                    <a
-                      className="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-20"
-                      href="http://www.shehala.com/8-reasons-why-visual-content-is-important-for-online-marketing"
-                    >
-                      Read More <i className="ti ti-angle-double-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="featured-imagebox featured-imagebox-blog">
-                  <div className="featured-thumbnail">
-                    {/* <!-- featured-thumbnail --> */}
-                    <img
-                      className="img-fluid"
-                      src="http://www.shehala.com/public/frontend/images/blog/shehala-ecommerce.png"
-                      alt=""
-                    />
-                    <div className="ttm-blog-overlay-iconbox">
-                      <a href="http://www.shehala.com/role-and-essence-of-clipping-path-services-for-modern-ecommerce">
-                        <i className="ti ti-plus"></i>
-                      </a>
-                    </div>
-                    <div className="ttm-box-view-overlay"></div>
-                  </div>
-                  <div className="featured-content">
-                    {/* <!-- featured-content --> */}
-                    <div className="ttm-box-post-date">
-                      {/* <!-- ttm-box-post-date --> */}
-                      <span className="ttm-entry-date">
-                        <time
-                          className="entry-date"
-                          dateTime="2019-01-16T07:07:55+00:00"
-                        >
-                          8<span className="entry-month entry-year">Feb</span>
-                        </time>
-                      </span>
-                    </div>
-                    <div className="featured-title">
-                      {/* <!-- featured-title --> */}
-                      <h5>
-                        <a href="http://www.shehala.com/role-and-essence-of-clipping-path-services-for-modern-ecommerce">
-                          Role and Essence of Clipping Path Services for Modern
-                          Ecommerce
-                        </a>
-                      </h5>
-                    </div>
-                    <div className="post-meta">
-                      {/* <!-- post-meta --> */}
-                      <span className="ttm-meta-line">
-                        <i className="fa fa-comments"></i> comments
-                      </span>
-                      <span className="ttm-meta-line">
-                        <i className="fa fa-user"></i> Shehala
-                      </span>
-                    </div>
-                    <div className="featured-desc">
-                      {/* <!-- featured-description --> */}
-                      <p>
-                        It is now common knowledge that clipping path design has
-                        a dominant role in modern online marketing. Among
-                        most...
-                      </p>
-                    </div>
-                    <a
-                      className="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-20"
-                      href="http://www.shehala.com/role-and-essence-of-clipping-path-services-for-modern-ecommerce"
-                    >
-                      Read More <i className="ti ti-angle-double-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="featured-imagebox featured-imagebox-blog">
-                  <div className="featured-thumbnail">
-                    {/* <!-- featured-thumbnail --> */}
-                    <img
-                      className="img-fluid"
-                      src="http://www.shehala.com/public/frontend/images/blog/online_business.png"
-                      alt=""
-                    />
-                    <div className="ttm-blog-overlay-iconbox">
-                      <a href="http://www.shehala.com/7-image-editing-tips-to-dominate-in-online-business">
-                        <i className="ti ti-plus"></i>
-                      </a>
-                    </div>
-                    <div className="ttm-box-view-overlay"></div>
-                  </div>
-                  <div className="featured-content">
-                    {/* <!-- featured-content --> */}
-                    <div className="ttm-box-post-date">
-                      {/* <!-- ttm-box-post-date --> */}
-                      <span className="ttm-entry-date">
-                        <time
-                          className="entry-date"
-                          dateTime="2019-01-16T07:07:55+00:00"
-                        >
-                          10
-                          <span className="entry-month entry-year">Feb</span>
-                        </time>
-                      </span>
-                    </div>
-                    <div className="featured-title">
-                      {/* <!-- featured-title --> */}
-                      <h5>
-                        <a href="http://www.shehala.com/7-image-editing-tips-to-dominate-in-online-business">
-                          Seven Image Editing Tips To Dominate In Online
-                          Business
-                        </a>
-                      </h5>
-                    </div>
-                    <div className="post-meta">
-                      {/* <!-- post-meta --> */}
-                      <span className="ttm-meta-line">
-                        <i className="fa fa-comments"></i> comments
-                      </span>
-                      <span className="ttm-meta-line">
-                        <i className="fa fa-user"></i> Shehala
-                      </span>
-                    </div>
-                    <div className="featured-desc">
-                      {/* <!-- featured-description --> */}
-                      <p>
-                        If you are planning to set up an online business or take
-                        your business ahead, you should consider...
-                      </p>
-                    </div>
-                    <a
-                      className="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-20"
-                      href="http://www.shehala.com/7-image-editing-tips-to-dominate-in-online-business"
-                    >
-                      Read More <i className="ti ti-angle-double-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="featured-imagebox featured-imagebox-blog">
-                  <div className="featured-thumbnail">
-                    {/* <!-- featured-thumbnail --> */}
-                    <img
-                      className="img-fluid"
-                      src="http://www.shehala.com/public/frontend/images/blog/visual_content.png"
-                      alt=""
-                    />
-                    <div className="ttm-blog-overlay-iconbox">
-                      <a href="http://www.shehala.com/8-reasons-why-visual-content-is-important-for-online-marketing">
-                        <i className="ti ti-plus"></i>
-                      </a>
-                    </div>
-                    <div className="ttm-box-view-overlay"></div>
-                  </div>
-                  <div className="featured-content">
-                    {/* <!-- featured-content --> */}
-                    <div className="ttm-box-post-date">
-                      {/* <!-- ttm-box-post-date --> */}
-                      <span className="ttm-entry-date">
-                        <time
-                          className="entry-date"
-                          dateTime="2019-01-16T07:07:55+00:00"
-                        >
-                          13
-                          <span className="entry-month entry-year">Feb</span>
-                        </time>
-                      </span>
-                    </div>
-                    <div className="featured-title">
-                      {/* <!-- featured-title --> */}
-                      <h5>
-                        <a href="http://www.shehala.com/8-reasons-why-visual-content-is-important-for-online-marketing">
-                          Eight Reasons Why Visual Content is Important for
-                          Online Marketing
-                        </a>
-                      </h5>
-                    </div>
-                    <div className="post-meta">
-                      {/* <!-- post-meta --> */}
-                      <span className="ttm-meta-line">
-                        <i className="fa fa-comments"></i> comments
-                      </span>
-                      <span className="ttm-meta-line">
-                        <i className="fa fa-user"></i> Shehala
-                      </span>
-                    </div>
-                    <div className="featured-desc">
-                      {/* <!-- featured-description --> */}
-                      <p>
-                        Every day millions of contents are posted online in
-                        different forms of posts like blog articles, e-books
-                      </p>
-                    </div>
-                    <a
-                      className="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-20"
-                      href="http://www.shehala.com/8-reasons-why-visual-content-is-important-for-online-marketing"
-                    >
-                      Read More <i className="ti ti-angle-double-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="featured-imagebox featured-imagebox-blog">
-                  <div className="featured-thumbnail">
-                    {/* <!-- featured-thumbnail --> */}
-                    <img
-                      className="img-fluid"
-                      src="http://www.shehala.com/public/frontend/images/blog/shehala-ecommerce.png"
-                      alt=""
-                    />
-                    <div className="ttm-blog-overlay-iconbox">
-                      <a href="http://www.shehala.com/role-and-essence-of-clipping-path-services-for-modern-ecommerce">
-                        <i className="ti ti-plus"></i>
-                      </a>
-                    </div>
-                    <div className="ttm-box-view-overlay"></div>
-                  </div>
-                  <div className="featured-content">
-                    {/* <!-- featured-content --> */}
-                    <div className="ttm-box-post-date">
-                      {/* <!-- ttm-box-post-date --> */}
-                      <span className="ttm-entry-date">
-                        <time
-                          className="entry-date"
-                          dateTime="2019-01-16T07:07:55+00:00"
-                        >
-                          8<span className="entry-month entry-year">Feb</span>
-                        </time>
-                      </span>
-                    </div>
-                    <div className="featured-title">
-                      {/* <!-- featured-title --> */}
-                      <h5>
-                        <a href="http://www.shehala.com/role-and-essence-of-clipping-path-services-for-modern-ecommerce">
-                          Role and Essence of Clipping Path Services for Modern
-                          Ecommerce
-                        </a>
-                      </h5>
-                    </div>
-                    <div className="post-meta">
-                      {/* <!-- post-meta --> */}
-                      <span className="ttm-meta-line">
-                        <i className="fa fa-comments"></i> comments
-                      </span>
-                      <span className="ttm-meta-line">
-                        <i className="fa fa-user"></i> Shehala
-                      </span>
-                    </div>
-                    <div className="featured-desc">
-                      {/* <!-- featured-description --> */}
-                      <p>
-                        It is now common knowledge that clipping path design has
-                        a dominant role in modern online marketing. Among
-                        most...
-                      </p>
-                    </div>
-                    <a
-                      className="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-20"
-                      href="http://www.shehala.com/role-and-essence-of-clipping-path-services-for-modern-ecommerce"
-                    >
-                      Read More <i className="ti ti-angle-double-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="featured-imagebox featured-imagebox-blog">
-                  <div className="featured-thumbnail">
-                    {/* <!-- featured-thumbnail --> */}
-                    <img
-                      className="img-fluid"
-                      src="http://www.shehala.com/public/frontend/images/blog/online_business.png"
-                      alt=""
-                    />
-                    <div className="ttm-blog-overlay-iconbox">
-                      <a href="http://www.shehala.com/7-image-editing-tips-to-dominate-in-online-business">
-                        <i className="ti ti-plus"></i>
-                      </a>
-                    </div>
-                    <div className="ttm-box-view-overlay"></div>
-                  </div>
-                  <div className="featured-content">
-                    {/* <!-- featured-content --> */}
-                    <div className="ttm-box-post-date">
-                      {/* <!-- ttm-box-post-date --> */}
-                      <span className="ttm-entry-date">
-                        <time
-                          className="entry-date"
-                          dateTime="2019-01-16T07:07:55+00:00"
-                        >
-                          10
-                          <span className="entry-month entry-year">Feb</span>
-                        </time>
-                      </span>
-                    </div>
-                    <div className="featured-title">
-                      {/* <!-- featured-title --> */}
-                      <h5>
-                        <a href="http://www.shehala.com/7-image-editing-tips-to-dominate-in-online-business">
-                          Seven Image Editing Tips To Dominate In Online
-                          Business
-                        </a>
-                      </h5>
-                    </div>
-                    <div className="post-meta">
-                      {/* <!-- post-meta --> */}
-                      <span className="ttm-meta-line">
-                        <i className="fa fa-comments"></i> comments
-                      </span>
-                      <span className="ttm-meta-line">
-                        <i className="fa fa-user"></i> Shehala
-                      </span>
-                    </div>
-                    <div className="featured-desc">
-                      {/* <!-- featured-description --> */}
-                      <p>
-                        If you are planning to set up an online business or take
-                        your business ahead, you should consider...
-                      </p>
-                    </div>
-                    <a
-                      className="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-20"
-                      href="http://www.shehala.com/7-image-editing-tips-to-dominate-in-online-business"
-                    >
-                      Read More <i className="ti ti-angle-double-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </SwiperSlide>
+              </SwiperSlide>)}
             </Swiper>
-
-            {/* <!-- featured-imagebox-blog end --> */}
           </div>
         </div>
-        {/* <!-- row end --> */}
-      </div>
+        {/* <!-- blog-slide end --> */}
     </section>
   );
 };

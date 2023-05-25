@@ -172,8 +172,6 @@ const Footer = () => {
                       <img
                         src="https://www.positivessl.com/images/seals/positivessl_trust_seal_md_167x42.png"
                         border="0"
-                        onMouseDown="return tLKB(event,'http://www.trustlogo.com/ttb_searcher/trustlogo?v_querytype=W&amp/;v_shortname=POSDV&amp;v_search=http://www.shehala.com/&amp;x=6&amp;y=5');"
-                        onContextMenu="return tLLB(event);"
                         alt=""
                       />
                   </div>

@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { activeMenu } from '../../features/collapse/collapseSlice';
 
 const MenuBar = () => {
+  const [isChecked, setIsChecked] = useState(false);
+  const dispatch = useDispatch();
+  const {menuName} = useSelector((state) => state.collapse);
+  const handleMenu = name => {
+    dispatch(activeMenu(name))
+  }
+  // Function to handle checkbox change
+  const handleCheckboxChange = (event) => {
+    setIsChecked(event.target.checked);
+  };
     return (
         <div id="site-header-menu" className="site-header-menu">
               <div className="site-header-menu-inner ttm-stickable-header visible-title">
                 <div className="container contain">
-                  {/* <!-- site-branding --> */}
+                  {/* site-branding */}
 
                   <div className="site-branding">
-                    <a
+                    <Link
                       className="home-link"
-                      href="http://www.google.com"
+                      to="/"
                       title="Altech"
                       rel="home"
                     >
@@ -20,22 +33,22 @@ const MenuBar = () => {
                         src="http://www.shehala.com/public/frontend/images/shehalaitlimited.png"
                         alt="logo"
                       />
-                    </a>
+                    </Link>
                   </div>
-                  {/* <!-- site-branding end --> */}
 
-                  {/* <!--site-navigation --> */}
+                  {/* site-navigation */}
 
                   <div id="site-navigation" className="site-navigation">
                     <div className="ttm-rt-contact">
-                      {/* <!-- header-icons --> */}
+                      {/* header-icons */}
 
                       <div className="ttm-header-icons "></div>
-                      {/* <!-- header-icons end --> */}
                     </div>
 
                     <div className="ttm-menu-toggle">
-                      <input type="checkbox" id="menu-toggle-form" />
+                      <input type="checkbox" id="menu-toggle-form"
+        checked={isChecked}
+        onChange={handleCheckboxChange} />
 
                       <label
                         htmlFor="menu-toggle-form"
@@ -49,160 +62,34 @@ const MenuBar = () => {
                       </label>
                     </div>
 
-                    <nav id="menu" className="menu">
+                    <nav id="menu" className={`${isChecked===true ? "menu active" : "menu"}`}>
                       <ul className="dropdown">
-                        <li className="active">
-                          <a href="http://www.google.com">Home</a>{" "}
+                        <li className={`${menuName==="home" ? "active" : "null"}`}  onClick={() => handleMenu("home")}>
+                          <Link to="/">Home</Link>
                         </li>
 
-                        <li className="null">
-                          <a href="http://www.google.com">About Us</a>
+                        <li className={`${menuName==="about" ? "active" : "null"}`}  onClick={() => handleMenu("about")}>
+                          <Link to="/about">About Us</Link>
                         </li>
 
-                        <li className="has-submenu">
-                          <a href="http://www.google.com">Services</a>
-
-                          <ul className="sub-menu">
-                            <li className="null has-submenu">
-                              <a href="http://www.google.com">
-                                Web Development
-                              </a>
-
-                              <ul className="sub-menu">
-                                <li className="null">
-                                  <a href="http://www.google.com">
-                                    Web Application
-                                  </a>
-                                </li>
-
-                                <li className="null">
-                                  <a href="http://www.google.com">
-                                    Digital Catalog System
-                                  </a>
-                                </li>
-
-                                <li className="null">
-                                  <a href="http://www.google.com">
-                                    CMS Banner System
-                                  </a>
-                                </li>
-
-                                <li className="null">
-                                  <a href="http://www.google.com">
-                                    Content Management System
-                                  </a>
-                                </li>
-
-                                <li className="null">
-                                  <a href="http://www.google.com">
-                                    Website Maintenance
-                                  </a>
-                                </li>
-
-                                <li className="null">
-                                  <a href="http://www.google.com">
-                                    Banner Order System
-                                  </a>
-                                </li>
-                              </ul>
-                            </li>
-
-                            <li className="null">
-                              <a href="http://www.google.com">
-                                Software Development
-                              </a>{" "}
-                            </li>
-
-                            <li className="has-submenu">
-                              <a href="http://www.google.com">
-                                Website Design
-                              </a>
-
-                              <ul className="sub-menu">
-                                <li className="null">
-                                  <a href="http://www.google.com">
-                                    Responsive Web Design{" "}
-                                  </a>
-                                </li>
-
-                                <li className="null">
-                                  <a href="http://www.google.com">
-                                    Logo Design
-                                  </a>
-                                </li>
-
-                                <li className="null">
-                                  <a href="http://www.google.com">
-                                    PSD to XHTML/CSS3
-                                  </a>
-                                </li>
-
-                                <li className="null">
-                                  <a href="http://www.google.com">
-                                    PSD Design
-                                  </a>
-                                </li>
-                              </ul>
-                            </li>
-
-                            <li className="has-submenu">
-                              <a href="http://www.google.com">
-                                Ecommerce Development
-                              </a>
-
-                              <ul className="sub-menu">
-                                <li className="null">
-                                  <a href="http://www.google.com">
-                                    WordPress WooCommerce{" "}
-                                  </a>
-                                </li>
-
-                                <li className="null">
-                                  <a href="http://www.google.com">
-                                    Joomla VirtueMart
-                                  </a>
-                                </li>
-
-                                <li className="null">
-                                  <a href="http://www.google.com">
-                                    Magento Ecommerce
-                                  </a>
-                                </li>
-
-                                <li className="null">
-                                  <a href="http://www.google.com">
-                                    Opencart Ecommerce
-                                  </a>
-                                </li>
-                              </ul>
-                            </li>
-
-                            <li className="null">
-                              <a href="http://www.google.com">
-                                {" "}
-                                Digital Marketing
-                              </a>
-                            </li>
-                          </ul>
+                        <li className={`${menuName==="service" ? "active" : "null"}`}  onClick={() => handleMenu("service")}>
+                          <Link to="/service">Services</Link>
                         </li>
 
-                        <li className="null">
-                          <a href="#">
+                        <li className={`${menuName==="portfolio" ? "active" : "null"}`}  onClick={() => handleMenu("portfolio")}>
+                          <Link to="/portfolio">
                             Portfolio
-                          </a>{" "}
+                          </Link>
                         </li>
 
-                        <li className="null">
-                          <a href="#">Blog</a>
+                        <li className={`${menuName==="blog" ? "active" : "null"}`}  onClick={() => handleMenu("blog")}>
+                          <Link to="/blog">Blog</Link>
                         </li>
 
-                        <li className="null">
-                          <a href="#">
+                        <li className={`${menuName==="contact" ? "active" : "null"}`}  onClick={() => handleMenu("contact")}>
+                          <Link to="/contact">
                             Contact Us
-                          </a>
-                        </li>
-                        <li className="null">
-                          <a href="#">CSR</a>
+                          </Link>
                         </li>
                       </ul>
                     </nav>
